@@ -1,0 +1,39 @@
+.NavBar{
+    background-color: #3794b8;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Abhaya Libre', serif;
+}
+.navbar-logo{
+    padding-left: 100px;
+    color: #fff;
+    font-size: 30px;
+}
+.triangle-center{
+    position: absolute; 
+    top:0;
+    left: 50%;
+    z-index: 2;
+    border-top: 5rem solid #3794b8;
+    border-right: 100px solid transparent;
+}
+.right-side-nav{
+    width: 50%;
+    background-color: #89CFF0;
+}
+.nav-menu{
+    list-style: none;
+}
+/* @NavItems.js */
+.nav-links{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    float:right;
+    padding: 5px;
+    margin-right: 90px;
+    font-size: 30px;
+}
+
+
