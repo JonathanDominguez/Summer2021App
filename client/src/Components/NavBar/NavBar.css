@@ -1,5 +1,6 @@
+/* Background of navbar: shapes */
 .NavBar{
-    background-color: #3794b8;
+    background-color: #4B99C0;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -15,15 +16,17 @@
     top:0;
     left: 50%;
     z-index: 2;
-    border-top: 5rem solid #3794b8;
-    border-right: 100px solid transparent;
+    border-top: 5rem solid #4B99C0;
+    border-right: 5vw solid transparent;
 }
+/* Right side of navbar */
 .right-side-nav{
     width: 50%;
     background-color: #89CFF0;
 }
 .nav-menu{
-    list-style: none;
+    padding-top: 1rem;
+    list-style-type: none;
 }
 /* @NavItems.js */
 .nav-links{
@@ -31,9 +34,85 @@
     list-style: none;
     text-decoration: none;
     float:right;
-    padding: 5px;
     margin-right: 90px;
     font-size: 30px;
+    line-height: 1rem;
 }
+/* Hamburger & navBar for responsive */
+.hamburger{
+    display: none;
+}
+.do-not-show{
+    display: none;
+}
+/* Responsive css */
+@media screen and (max-width: 110rem) {
+    .nav-links{
+        color: #fff;
+        list-style: none;
+        text-decoration: none;
+        float:right;
+        margin-right: 20px;
+        font-size: 30px;
+        line-height: 1rem;
+    }
+}
+/* Responsive for when font text can not get smaller */
+@media screen and (max-width: 75rem) {
+    /* sliding in and out */
+    .slide-out{
+        margin-top: 5rem;
+        position: absolute;
+        right: -50vw;
+        width: 30vw;
+        height: 370px;
+        background: #4B99C0;
+        -webkit-animation: slide 0.5s forwards;
+        -webkit-animation-delay: 2s;
+        animation: slide 0.8s forwards;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
-
+    }
+    @-webkit-keyframes slide {
+        100% { right: 0; }
+    }
+    @keyframes slide {
+        100% { right: 0; }
+    }
+    .slide-back-in{
+        display: none;
+        list-style: none;
+    }
+    .hamburger{
+        margin-top: 0.8rem;
+        display: block;
+        color: #fff;
+        float:right;
+        margin-right: 1rem;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .nav-responsive-links{
+        list-style-type: none;
+    }
+    .nav-links{
+        color: #fff;
+        list-style: none;
+        text-decoration: none;
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .show-list{
+        list-style-type: none;
+    }
+}
+/* Responsive text */
+@media screen and (max-width: 41rem) {
+    .nav-links{
+        font-size: 20px;
+    }
+}
