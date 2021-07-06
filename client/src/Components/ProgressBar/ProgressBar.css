@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Abhaya Libre', serif;
+}
+/* Holds both buttons and progress bar */
+.main-container{
+    display: flex;
+    flex-direction: row
+}
+/* Holds progress bar  */
+.container{
+    /* background-color:yellow; */
+    background-color: #ffffff;
+    height: 91.9vh;
+    width: 25vw;
+}
+.progress-container{
+    margin: auto;
+    width: 50%;
+    padding-top: 15vh;
+}
+/* Child sections either margin is large (20vh) 
+or small (4vh) */
+.section-large{
+    height: 50px;
+    margin-bottom: 20vh;
+}
+.section-small{
+    height: 50px;
+    margin-bottom: 4vh;
+}
+/* Section with circle numbers 
+current sections/ completed sections light blue
+while incomplete ones are grey*/
+.section-number-blue{
+    float: left;  
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    background: #4B99C0;
+}
+.section-number-grey{
+    float: left;  
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    background: #999;
+}
+/* section number */
+.num-section{
+    padding:0.4rem 0.4rem;
+}
+/* Section title color */
+.title-blue{
+    padding:0.5rem 0.8rem;
+    margin-left: 4rem;
+    font-size: 30px;
+    color: #4B99C0;
+}
+.title-grey{
+    padding:0.5rem 0.8rem;
+    margin-left: 4rem;
+    font-size: 30px;
+    color: #999;
+}
+/* Lines sizes between sections */
+.line-large{
+    width: 0.1rem;
+    height: 11rem;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    background-color: #999999;
+    transition: 0.2s;
+}
+.line-small{
+    width: 0.1rem;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    background-color: #999999;
+    transition: 0.2s;
+}
+/* Educations levels  */
+.show-levels{
+    margin-left: 3.4rem;
+    color: #999999;
+    width: 6rem;
+    margin-bottom: 2rem;
+}
+.display-none{
+    display: none;
+}
+.show-blue{
+    color: #4B99C0;
+    width: 6rem;
+    margin-bottom: 1rem;
+}
+.show-grey{
+    color: #999;
+    width: 6rem;
+    margin-bottom: 1rem;
+}
+/* =========================== */
+/* === SECOND HALF: Button === */
+/* =========================== */
+.button-container{
+    /* background-color: yellow; */
+    width: 75vw;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin-top: 80vh;
+}
+.grid-item {
+    font-size: 30px;
+}
+.button-type{
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background: #4B99C0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.5rem;
+}
