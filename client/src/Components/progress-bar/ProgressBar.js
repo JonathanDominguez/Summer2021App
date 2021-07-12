@@ -66,7 +66,7 @@ export default function ProgressBar() {
                 <div className="form-button-container">
                     {/* Forms sections */}
                     <div className="form-button-item">
-                        <Form/>
+                        <EducationForm/>
                     </div>
                     {/* Forms */}
                     <div className="form-button-item">

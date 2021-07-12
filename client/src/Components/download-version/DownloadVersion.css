@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: auto;
     height: 91.8vh;
-    margin-top: 0rem;
+    /* margin-top: 0rem; */
     padding: 10px;
     font-family: 'Abhaya Libre', serif;
 }
@@ -51,6 +51,7 @@
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
+    margin-top: 6vh;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 @media screen and (max-width: 75rem) {

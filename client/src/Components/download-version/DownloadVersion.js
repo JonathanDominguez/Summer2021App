@@ -2,7 +2,7 @@ import React from 'react'
 import './DownloadVersion.css'
 import resumeImage from '../../images/sample.png'
 
-export default function DownloadVersion() {
+const DownloadVersion = () => {
     return (
         <div>
             <div className="main-container">
@@ -27,7 +27,7 @@ export default function DownloadVersion() {
                                     <img src={resumeImage} className = "image-fix" alt ="resume"/>
                                 </div>
                                 <div className="image-item">
-                                    <button className = "button-type">Mircosoft Word</button>
+                                    <button className = "button-type">Microsoft Word</button>
                                 </div> 
                             </div>                                       
                         </div> 
@@ -37,3 +37,4 @@ export default function DownloadVersion() {
         </div>
     )
 }
+export default DownloadVersion
