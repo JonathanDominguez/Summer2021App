@@ -12,8 +12,8 @@ ReactDOM.render(
   <React.StrictMode>
     <NavBar />
     {/* <LandingPage /> */}
-    {/* <ProgressBar /> */}
-    <DownloadVersion />
+    <ProgressBar />
+    {/* <DownloadVersion /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

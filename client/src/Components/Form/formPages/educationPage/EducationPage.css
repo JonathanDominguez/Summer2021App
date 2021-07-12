@@ -1,0 +1,61 @@
+.main-heading-form-container {
+    display: grid;
+    grid-template-columns: auto;
+    /* background-color: green; */
+    padding-top: 10vh;
+}
+.main-heading-form-item {
+    background-color: #fff;
+    /* border: 1px solid purple; */
+    padding: 1vh;
+}
+.column-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* background-color: yellow; */
+}
+.column-item {
+    /* border: 1px solid rgba(131, 223, 101, 0.8); */
+    padding: 20px;
+}
+.education-date-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.education-date-item {
+    /* blank */
+}
+/* Responsive */
+@media screen and (max-width: 68rem) {
+    .main-heading-form-container {
+        /* display: grid;
+        background-color: green; */
+        /* grid-template-columns: 80%; */
+        /* background-color: red; */
+        padding-top: 1vh;
+    }
+    /* .main-heading-form-item {
+        background-color: #fff;
+        border: 1px solid purple;
+        padding: 1vh;
+    } */
+    .column-container {
+        display: grid;
+        grid-template-columns: auto;
+        /* background-color: yellow; */
+    }
+    .education-date-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    /* .column-item {
+        border: 1px solid rgba(131, 223, 101, 0.8);
+        padding-right: 20px;
+    }
+
+    .education-date-item {
+    } */
+}
+@media screen and (max-width: 68rem) {
+
+}

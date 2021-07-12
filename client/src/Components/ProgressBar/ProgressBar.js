@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
 import './ProgressBar.css'
+// Forms inputs
+import Form from '../Form/formPages/headingPage/Form'
+import EducationForm from '../Form//formPages/educationPage/EducationPage'
+
+
 
 export default function ProgressBar() {
     const [count, setCount] = useState(0);
@@ -24,10 +29,10 @@ export default function ProgressBar() {
     }
 
     return (
-        <div className = "main-container">
+        <div className="main-progress-container">
             {/* Progress Bar  */}
-            <div  className = "container">
-                <div className = "progress-container">
+            <div className="progress-item">
+                <div className = "progress-container-div">
                     <div className = {count ===0 ? "section-large" : "section-small"}>
                         <div className = "section-number-blue"><p className = "num-section">1</p></div>
                         <p className = {count >=0 ? "title-blue" : "title-grey"}>Heading</p>
@@ -56,14 +61,23 @@ export default function ProgressBar() {
                     </div>
                 </div>
             </div>
-            {/* Button */}
-            <div className = "button-container">
-                <div className="grid-container">
-                    <div className="grid-item">
-                        <button className = "button-type" onClick={minusOne} disabled={backValue}>Back</button>
+            {/* Button && Forms */}
+            <div className="progress-item">
+                <div className="form-button-container">
+                    {/* Forms sections */}
+                    <div className="form-button-item">
+                        <EducationForm/>
                     </div>
-                    <div className="grid-item">
-                        <button className = "button-type" onClick={addOne} disabled={nextValue}>Continue</button>
+                    {/* Forms */}
+                    <div className="form-button-item">
+                            <div className="button-grid-container">
+                                <div className="button-grid-item">
+                                    <button className = "button-type" onClick={minusOne} disabled={backValue}>Back</button>
+                                </div>
+                                <div className="button-grid-item">
+                                    <button className = "button-type" onClick={addOne} disabled={nextValue}>Continue</button>
+                                </div> 
+                            </div>
                     </div> 
                 </div>
             </div>

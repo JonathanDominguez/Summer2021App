@@ -1,0 +1,51 @@
+.input-container{
+    margin:auto;
+    width: 100%;
+    /* background-color: yellow; */
+}
+/*  */
+.label-default{
+    padding-left: 0.15rem;
+}
+.label-valid{
+    padding-left: 0.15rem;
+    color: #39DE70;
+}
+.label-invalid{
+    padding-left: 0.15rem;
+    color: red;
+}
+/*  */
+input {
+	outline: none;
+	border: none;
+}
+.input-container{
+    padding: 10px 15px;
+}
+.input-area{
+    width: 100%;
+    border-bottom: 2px solid #d9d9d9;
+    border-style:none;
+    font-size: 1.5rem;
+}  
+/* Bottom line */
+.bottom-border-default{
+    margin-top: 0px;
+    width: 100%;
+    height: 0.1rem;
+    background: #999;
+}
+.bottom-border-valid{
+    margin-top: 0px;
+    width: 100%;
+    height: 0.1rem;
+    background: #39DE70;
+}
+.bottom-border-invalid{
+    margin-top: 0px;
+    width: 100%;
+    height: 0.1rem;
+    background: red;
+}
+

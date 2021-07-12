@@ -2,21 +2,22 @@
     box-sizing: border-box;
     font-family: 'Abhaya Libre', serif;
 }
-/* Holds both buttons and progress bar */
-.main-container{
-    display: flex;
-    flex-direction: row
+/* Main grid container  */
+.main-progress-container{
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+    height: 91.5vh;
+}
+/* Holds progress bar and buttons */
+.progress-item{
+    width: 100%;
+    padding: 20px;    
+    /* text-align: center; */
 }
 /* Holds progress bar  */
-.container{
-    /* background-color:yellow; */
-    background-color: #ffffff;
-    height: 91.9vh;
-    width: 25vw;
-}
-.progress-container{
+.progress-container-div{
     margin: auto;
-    width: 50%;
+    width: 100%;
     padding-top: 15vh;
 }
 /* Child sections either margin is large (20vh) 
@@ -110,16 +111,16 @@ while incomplete ones are grey*/
 /* === SECOND HALF: Button === */
 /* =========================== */
 .button-container{
-    /* background-color: yellow; */
     width: 75vw;
 }
-.grid-container {
+.button-grid-container {
     display: grid;
     grid-template-columns: 80% 20%;
-    margin-top: 80vh;
+    margin-top: -10vh;
 }
-.grid-item {
+.button-grid-item {
     font-size: 30px;
+    margin: 10px;
 }
 .button-type{
     border: none;
@@ -131,4 +132,72 @@ while incomplete ones are grey*/
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
+    margin-top: 25vh;
 }
+/* Form */
+.form-button-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+}
+.form-button-item {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/* Responsive */
+@media screen and (max-width: 81rem) {
+    .title-blue{
+        padding:0.8rem 1.1rem 0.8rem 0.5rem;
+        margin-left: 4rem;
+        font-size: 20px;
+        color: #4B99C0;
+    }
+    .title-grey{
+        padding:0.8rem 1.1rem 0.8rem 0.5rem;
+        margin-left: 4rem;
+        font-size: 20px;
+        color: #999;
+    }
+    .button-grid-container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+}
+@media screen and (max-width: 68rem) {
+    .title-blue{
+        display: none;
+    }
+    .title-grey{
+        display: none;
+    }
+    .line-large{
+        display: none;
+    }
+    .line-small{
+        display: none;
+    }
+    .button-grid-container {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .button-type{
+        margin-top: 1vh;
+    }
+}
+@media screen and (max-width: 50rem) {
+    .button-grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .progress-item{
+        width: 100%;
+        padding: 20px;   
+    }
+    
+    .form-button-container {
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: -8vw;
+    }
+}
+
+
