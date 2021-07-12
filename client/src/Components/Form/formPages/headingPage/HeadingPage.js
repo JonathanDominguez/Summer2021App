@@ -1,9 +1,9 @@
 import React from 'react'
 // CSS
-import './Form.css'
+import './HeadingPage.css'
 // Input Components
-import EmailInputTag from '../../Inputs/EmailInputs/EmailInputTag'
-import Input from '../../Inputs/Inputs/Input'
+import EmailInputTag from '../../Inputs/emailInput/EmailInputTag'
+import Input from '../../Inputs/basicInput/Input'
 import PhoneNumberInput from '../../Inputs/phoneNumberInput/phoneNumberInput'
 
 export default function Form() {

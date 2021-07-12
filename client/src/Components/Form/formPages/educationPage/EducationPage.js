@@ -2,7 +2,7 @@ import React from 'react'
 // CSS
 import './EducationPage.css'
 // Input Components
-import Input from '../../Inputs/Inputs/Input'
+import Input from '../../Inputs/basicInputs/Input'
 import DateInput from '../../Inputs/dateInput/DateInput'
 
 export default function EducationPage() {

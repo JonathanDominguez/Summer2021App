@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // Components
-import NavBar from './Components/NavBar/NavBar'
-import LandingPage from './Components/LandingPage/LandingPage'
-import ProgressBar from './Components/ProgressBar/ProgressBar'
-import DownloadVersion from './Components/DownloadVersion/DownloadVersion'
+import NavBar from './components/nav-bar/NavBar'
+import LandingPage from './components/landing-page/LandingPage'
+import ProgressBar from './components/progress-bar/ProgressBar'
+import DownloadVersion from './components/download-version/DownloadVersion'
 
 ReactDOM.render(
   <React.StrictMode>

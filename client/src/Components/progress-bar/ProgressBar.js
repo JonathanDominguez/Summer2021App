@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './ProgressBar.css'
 // Forms inputs
-import Form from '../Form/formPages/headingPage/Form'
-import EducationForm from '../Form//formPages/educationPage/EducationPage'
+import Form from '../form/formPages/headingPage/HeadingPage'
+import EducationForm from '../form/formPages/educationPage/EducationPage'
 
 
 
@@ -66,7 +66,7 @@ export default function ProgressBar() {
                 <div className="form-button-container">
                     {/* Forms sections */}
                     <div className="form-button-item">
-                        <EducationForm/>
+                        <Form/>
                     </div>
                     {/* Forms */}
                     <div className="form-button-item">
