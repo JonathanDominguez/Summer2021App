@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './EmailInputTag.css'
 
-export default function EmailInputTag() {
+const EmailInputTag = () => {
     const [valid, setValid] = useState("label-default");
     const [validBottom, setValidBottom] = useState("bottom-border-default");
     const [textInput, setTextInput] = useState('');
@@ -42,3 +42,4 @@ export default function EmailInputTag() {
         </div>
     )
 }
+export default EmailInputTag;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './DateInput.css'
 
-
 const DateInput = (props) => {
     const [valid, setValid] = useState("label-default");
     const [validBottom, setValidBottom] = useState("bottom-border-default");

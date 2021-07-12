@@ -4,9 +4,7 @@ import './ProgressBar.css'
 import Form from '../form/formPages/headingPage/HeadingPage'
 import EducationForm from '../form/formPages/educationPage/EducationPage'
 
-
-
-export default function ProgressBar() {
+const ProgressBar = () => {
     const [count, setCount] = useState(0);
     let backValue = '';
     let nextValue  = '';
@@ -84,3 +82,5 @@ export default function ProgressBar() {
         </div>
     )
 }
+
+export default ProgressBar;

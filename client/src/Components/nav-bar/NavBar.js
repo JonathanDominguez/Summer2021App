@@ -4,7 +4,6 @@ import './NavBar.css'
 // Hamburger
 import Hamburger from 'hamburger-react'
 
-
 const NavBar = () => {
     const [isOpen, setOpen] = useState(false)
 

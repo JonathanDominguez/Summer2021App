@@ -13,7 +13,7 @@ ReactDOM.render(
     <NavBar />
     {/* <LandingPage /> */}
     {/* <ProgressBar /> */}
-    <DownloadVersion />
+    {/* <DownloadVersion /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

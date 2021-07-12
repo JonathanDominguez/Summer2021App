@@ -5,7 +5,7 @@ import './EducationPage.css'
 import Input from '../../Inputs/basicInput/Input'
 import DateInput from '../../Inputs/dateInput/DateInput'
 
-export default function EducationPage() {
+const EducationPage = () => {
     return (
         <div className="main-heading-form-container">
             {/* Top row */}
@@ -74,4 +74,5 @@ export default function EducationPage() {
     )
 }
 
+export default EducationPage;
 

@@ -6,7 +6,7 @@ import EmailInputTag from '../../Inputs/emailInput/EmailInputTag'
 import Input from '../../Inputs/basicInput/Input'
 import PhoneNumberInput from '../../Inputs/phoneNumberInput/phoneNumberInput'
 
-export default function Form() {
+const Form = () => {
     return (
         <div className="main-heading-form-container">
             {/* Top row */}
@@ -52,4 +52,4 @@ export default function Form() {
     )
 }
 
-
+export default Form;
