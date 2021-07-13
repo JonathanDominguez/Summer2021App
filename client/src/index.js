@@ -11,7 +11,7 @@ import DownloadVersion from './components/download-version/DownloadVersion'
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-    {/* <LandingPage /> */}
+    <LandingPage />
     {/* <ProgressBar /> */}
     {/* <DownloadVersion /> */}
   </React.StrictMode>,

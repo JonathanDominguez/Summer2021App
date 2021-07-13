@@ -1,0 +1,11 @@
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #89CFF0;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 91.9vh solid #4B99C0;
+    border-right: 50.05vw solid transparent;
+}
