@@ -28,12 +28,12 @@ const Form = () => {
             <div className="main-heading-form-item">
                 <div className="column-container">
                     <div className="column-item">
-                        <EmailInputTag />
+                        <EmailInputTag/>
                     </div>
                     <div className="column-item">
                         <PhoneNumberInput 
                         inputTitle = "Phone Number"
-                        placeholderText = "Enter your Phone Number"/>
+                        placeholderText = "e.g. (323) 123-1024"/>
                     </div>
                 </div>
             </div>  

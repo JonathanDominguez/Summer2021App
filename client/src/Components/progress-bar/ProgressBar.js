@@ -9,8 +9,10 @@ const ProgressBar = () => {
     let backValue = '';
     let nextValue  = '';
 
+    let validForm = true;
+
     function addOne (){
-        if(count === 5){
+        if(count === 5 || validForm === false){
             nextValue = true;
         }
         else{
@@ -64,7 +66,7 @@ const ProgressBar = () => {
                 <div className="form-button-container">
                     {/* Forms sections */}
                     <div className="form-button-item">
-                        <EducationForm/>
+                        <Form/>
                     </div>
                     {/* Forms */}
                     <div className="form-button-item">

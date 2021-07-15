@@ -21,7 +21,7 @@
     margin: auto;
     width: 50%;
 }
-img {
+.image {
     display: block;
     max-width:35rem;
     max-height:70rem;
@@ -115,13 +115,12 @@ p{
     .image-div{
         margin: auto;
     }
-    img{
+    .image{
         display: none;
+        overflow: hidden;
+
     }
     .text-info{
         width: 100%;
-    }
-    body{
-        overflow: hidden;
     }
 }

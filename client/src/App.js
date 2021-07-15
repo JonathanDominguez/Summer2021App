@@ -1,23 +1,18 @@
-// import logo from './logo.svg';
 import './App.css';
+// Components
+import NavBar from './components/nav-bar/NavBar'
+import LandingPage from './components/landing-page/LandingPage'
+import ProgressBar from './components/progress-bar/ProgressBar'
+import DownloadVersion from './components/download-version/DownloadVersion'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      {/* <LandingPage /> */}
+      <ProgressBar />
+      {/* <DownloadVersion /> */}
     </div>
   );
 }

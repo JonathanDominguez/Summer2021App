@@ -8,16 +8,16 @@ const EmailInputTag = () => {
     
     const handleClick = () => {
         if ((/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(textInput))){
-            console.log("yay");
+            console.log("valid");
             setValid("label-valid");
             setValidBottom("bottom-border-valid");
         }
         else{
-            console.log("error");
+            console.log("invalid");
             setValid("label-invalid");
             setValidBottom("bottom-border-invalid");
         }
-    }
+    } 
 
     const handleChange = (event) => {
         setTextInput(event.target.value);
@@ -37,7 +37,8 @@ const EmailInputTag = () => {
                 <div className = {validBottom}></div>
             </div>
             <div>
-                <button onClick = {handleClick}></button>
+                <button 
+                onClick = {handleClick}></button>
             </div>
         </div>
     )

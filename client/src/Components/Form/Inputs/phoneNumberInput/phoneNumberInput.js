@@ -7,7 +7,7 @@ const InpEmailInputTag = (props) => {
     const [textInput, setTextInput] = useState('');
     
     const handleClick = () => {
-        if ((/^\d{10}$/.test(textInput))){
+        if ((/^\d{10}$/.test(textInput)) || (/^[(]+[\d{2}]+[)]+[ ]+[\d{2}]+[-]+[\d{3}]*$/.test(textInput))){
             console.log("yay");
             setValid("label-valid");
             setValidBottom("bottom-border-valid");
