@@ -37,7 +37,7 @@ const InpEmailInputTag = (props) => {
                 <div className = {validBottom}></div>
             </div>
             <div>
-                <button onClick = {handleClick}></button>
+                <button onClick = {handleClick}>FAKE</button>
             </div>
         </div>
     )

@@ -1,32 +1,26 @@
-import React, { useState } from 'react'
-import './ProgressBar.css'
+import React, { useState } from 'react';
+// Routing
+
 // Forms inputs
-import Form from '../form/formPages/headingPage/HeadingPage'
-import EducationForm from '../form/formPages/educationPage/EducationPage'
+import './ProgressBar.css';
+import Form from '../form/formPages/headingPage/HeadingPage';
+import EducationForm from '../form/formPages/educationPage/EducationPage';
 
 const ProgressBar = () => {
     const [count, setCount] = useState(0);
     let backValue = '';
     let nextValue  = '';
-
     let validForm = true;
 
-    function addOne (){
-        if(count === 5 || validForm === false){
-            nextValue = true;
-        }
-        else{
-            setCount(count + 1)
-        }
+    const addOne = () => {
+        count === 5 || validForm === false ? nextValue = true : setCount(count + 1);
     }
-    function minusOne (){
-        if(count === 0){
-            backValue = true;
-        }
-        else{
-            setCount(count - 1)
-        }
+    const minusOne  = () => {
+        count === 0 ? backValue = true : setCount(count - 1);
     }
+
+
+
 
     return (
         <div className="main-progress-container">
@@ -66,7 +60,7 @@ const ProgressBar = () => {
                 <div className="form-button-container">
                     {/* Forms sections */}
                     <div className="form-button-item">
-                        <Form/>
+                        
                     </div>
                     {/* Forms */}
                     <div className="form-button-item">
@@ -75,7 +69,11 @@ const ProgressBar = () => {
                                     <button className = "button-type" onClick={minusOne} disabled={backValue}>Back</button>
                                 </div>
                                 <div className="button-grid-item">
-                                    <button className = "button-type" onClick={addOne} disabled={nextValue}>Continue</button>
+                                    <button 
+                                        className = "button-type" 
+                                        onClick={addOne} 
+                                        disabled={nextValue}
+                                    >Continue</button>
                                 </div> 
                             </div>
                     </div> 
