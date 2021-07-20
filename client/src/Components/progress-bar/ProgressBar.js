@@ -7,20 +7,25 @@ import Form from '../form/formPages/headingPage/HeadingPage';
 import EducationForm from '../form/formPages/educationPage/EducationPage';
 
 const ProgressBar = () => {
+    // States
+        // counter state
     const [count, setCount] = useState(0);
+        // valid state
+    // const [validForm, setValidForm] = useState();
+    // Variables
     let backValue = '';
     let nextValue  = '';
-    let validForm = true;
+    // let validForm = true;
+    const [passingInData, setPassingInData] = useState(false)
+    console.log("passingInData = " + passingInData)
 
     const addOne = () => {
-        count === 5 || validForm === false ? nextValue = true : setCount(count + 1);
+        count === 5 || passingInData === false ? nextValue = true : setCount(count + 1);
+        console.log('adding one: ' + passingInData)
     }
     const minusOne  = () => {
         count === 0 ? backValue = true : setCount(count - 1);
     }
-
-
-
 
     return (
         <div className="main-progress-container">
@@ -60,7 +65,7 @@ const ProgressBar = () => {
                 <div className="form-button-container">
                     {/* Forms sections */}
                     <div className="form-button-item">
-                        
+                        <Form passCheck = {setPassingInData}/>
                     </div>
                     {/* Forms */}
                     <div className="form-button-item">
