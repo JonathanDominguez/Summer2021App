@@ -1,9 +1,9 @@
 import './App.css';
 // Components
 import NavBar from './Components/nav-bar/NavBar'
-import LandingPage from './Components/landing-page/LandingPage'
+// import LandingPage from './Components/landing-page/LandingPage'
 import ProgressBar from './Components/progress-bar/ProgressBar'
-import DownloadVersion from './Components/download-version/DownloadVersion'
+// import DownloadVersion from './Components/download-version/DownloadVersion'
 
 
 function App() {

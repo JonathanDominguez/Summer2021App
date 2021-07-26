@@ -1,27 +1,28 @@
 import React, { useState } from 'react';
-// Routing
-
 // Forms inputs
 import './ProgressBar.css';
 import Form from '../form/formPages/headingPage/HeadingPage';
-import EducationForm from '../form/formPages/educationPage/EducationPage';
+// import useForm from '../form/formPages/headingPage/useFormHeading';
 
 const ProgressBar = () => {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    function submitForm() {
+        setIsSubmitted(true);
+    }
+    console.log(setIsSubmitted)
+
     // States
         // counter state
     const [count, setCount] = useState(0);
-        // valid state
-    // const [validForm, setValidForm] = useState();
     // Variables
     let backValue = '';
     let nextValue  = '';
-    // let validForm = true;
-    const [passingInData, setPassingInData] = useState(false)
-    console.log("passingInData = " + passingInData)
 
     const addOne = () => {
-        count === 5 || passingInData === false ? nextValue = true : setCount(count + 1);
-        console.log('adding one: ' + passingInData)
+        // console.log(values.lastName)
+        count === 5 ? nextValue = true : setCount(count + 1);
+        // count === 5 || continueOn === false ? nextValue = true : setCount(count + 1);
     }
     const minusOne  = () => {
         count === 0 ? backValue = true : setCount(count - 1);
@@ -65,22 +66,25 @@ const ProgressBar = () => {
                 <div className="form-button-container">
                     {/* Forms sections */}
                     <div className="form-button-item">
-                        <Form passCheck = {setPassingInData}/>
+                        <Form />
                     </div>
                     {/* Forms */}
                     <div className="form-button-item">
-                            <div className="button-grid-container">
-                                <div className="button-grid-item">
-                                    <button className = "button-type" onClick={minusOne} disabled={backValue}>Back</button>
-                                </div>
-                                <div className="button-grid-item">
-                                    <button 
-                                        className = "button-type" 
-                                        onClick={addOne} 
-                                        disabled={nextValue}
-                                    >Continue</button>
-                                </div> 
+                        <div className="button-grid-container">
+                            <div className="button-grid-item">
+                                <button className = "button-type" 
+                                    onClick={minusOne} 
+                                    disabled={backValue}
+                                >Back</button>
                             </div>
+                            <div className="button-grid-item">
+                                <button 
+                                    className = "button-type" 
+                                    onClick={addOne} 
+                                    disabled={nextValue}
+                                >Continue</button>
+                            </div> 
+                        </div>
                     </div> 
                 </div>
             </div>
