@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { UserContext } from '../../../progress-bar/validContext';
+
 
 const useForm = (callback, validate) => {
     const [values, setValues] = useState({
         firstName: '',
         lastName: '',
-        email: '',
+        usersEmail: '',
         phoneNumber: ''
     });
     const [errors, setErrors] = useState({});
@@ -22,18 +24,21 @@ const useForm = (callback, validate) => {
         e.preventDefault();
         setErrors(validate(values));
         setIsSubmitting(true);
+        // console.log(isSubmitting)
     };
 
     useEffect(
         () => {
             if (Object.keys(errors).length === 0 && isSubmitting) {
-                console.log('error')
+                // console.log('error')
             }
         },
         [errors]
     );
 
-    return { handleChange, handleSubmit, values, errors, isSubmitting };
+    return { handleChange, handleSubmit, values,  errors, isSubmitting };
     };
 
 export default useForm;
+
+
