@@ -5,7 +5,7 @@ import './HeadingPage.css'
 
 const Form = (props) => {
     // Props being brought in
-    const { data, handleChange, next, inputStatus } = props;
+    const { data, handleChange, next } = props;
     // Controls button being disabled 
     const [continueMe, setContinue] = useState(false)
     // First Input
@@ -20,7 +20,9 @@ const Form = (props) => {
     // Fourth Input
     const [styleStateFour, setStyleStateFour] = useState("label-default");
     const [styleStateBottomFour, setStyleStateBottomFour] = useState("bottom-border-default");
-
+    // Validation
+    // Return true: if is it invalid
+    // Return false: if it is valid 
     const firstNameValidation = () => {
         if (data.firstName === '') {
             console.log('reached firstname')
@@ -64,17 +66,20 @@ const Form = (props) => {
         return false
     }
 
+    // const [formStatus, setFormStatus] = useState()
     function checkAll (){
+        let setFormStatus; 
         const validationFuncs = [firstNameValidation(), lastNameValidation(), usersEmailValidation(), phoneNumberValidation()]
         for (let i = 0; i < validationFuncs.length; i++) {
-            if(1===1){
-                return false 
+            console.log(validationFuncs[i])
+            // Return true = invalid 
+            if(validationFuncs[i] === true){
+                // Form is not complete or invalid input(s)
+                setFormStatus = false
             }
         }
-        setContinue(true)
-        return true
+        return setFormStatus
     }
-
 
     function check (event){
         if(checkAll()===false){
@@ -82,7 +87,6 @@ const Form = (props) => {
             event.preventDefault();
         }
         else{
-            console.log('work')
             setContinue(true)
             next()
         }

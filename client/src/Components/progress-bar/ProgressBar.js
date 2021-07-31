@@ -5,7 +5,7 @@ import EducationForm from '../form/formPages/educationPage/EducationPage'
 
 const ProgressBar = () => { 
     const [currentStep, setCurrentStep] = useState(0);
-    const [validInput, setValidInput] = useState("label-default");
+    // const [validInput, setValidInput] = useState("label-default");
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -38,7 +38,7 @@ const ProgressBar = () => {
                     data={formData} 
                     handleChange={handleChange} 
                     next={next} 
-                    inputStatus={validInput}
+                    // inputStatus={validInput}
                     />
                 );
             case 1:
