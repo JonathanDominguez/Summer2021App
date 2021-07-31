@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ProgressBar.css';
-import Form from '../form/formPages/headingPage/HeadingPage';
-import EducationForm from '../form/formPages/educationPage/EducationPage'
+import Form from '../forms/headingPage/HeadingPage';
+import EducationForm from '../forms/educationPage/EducationPage'
 
 const ProgressBar = () => { 
     const [currentStep, setCurrentStep] = useState(0);
@@ -11,8 +11,13 @@ const ProgressBar = () => {
         lastName: '',
         usersEmail: '',
         phoneNumber: '',
-        schoolName: '',
-        gpa: ''
+        university: '',
+        startDate: '',
+        endDate:'',
+        degree:'',
+        gpa:'',
+        relevantCourseOne:'',
+        relevantCourseTwo:''
     });
 
     const handleChange = (event) => {
