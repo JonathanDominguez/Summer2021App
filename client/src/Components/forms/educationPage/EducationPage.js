@@ -1,34 +1,33 @@
 import React, { useState } from 'react'
 import './EducationPage.css'
 
-
 const EducationPage = (props) => {
       // Props being brought in
     const { data, handleChange, next, back } = props;
     // Controls button being disabled 
     const [continueMe, setContinue] = useState(false)
-    // First Input
+    // First Input: university 
     const [styleState, setStyleState] = useState("label-default");
     const [styleStateBottom, setStyleStateBottom] = useState("bottom-border-default");
-    // Second Input
+    // Second Input: start date
     const [styleStateTwo, setStyleStateTwo] = useState("label-default");
     const [styleStateBottomTwo, setStyleStateBottomTwo] = useState("bottom-border-default");
-    // Third Input
+    // Third Input: end date
     const [styleStateThree, setStyleStateThree] = useState("label-default");
     const [styleStateBottomThree, setStyleStateBottomThree] = useState("bottom-border-default");
-    // Fourth Input
+    // Fourth Input: degree
     const [styleStateFour, setStyleStateFour] = useState("label-default");
     const [styleStateBottomFour, setStyleStateBottomFour] = useState("bottom-border-default");
-    // Firth Input
+    // Firth Input: GPA
     const [styleStateFive, setStyleStateFive] = useState("label-default");
     const [styleStateBottomFive, setStyleStateBottomFive] = useState("bottom-border-default");
-    // Six Input
+    // Six Input: course work
     const [styleStateSix, setStyleStateSix] = useState("label-default");
     const [styleStateBottomSix, setStyleStateBottomSix] = useState("bottom-border-default");
-    // Seven Input
+    // Seven Input: course work
     const [styleStateSeven, setStyleStateSeven] = useState("label-default");
     const [styleStateBottomSeven, setStyleStateBottomSeven] = useState("bottom-border-default");
-
+    // Functions for validation as well as setting the css validation
     const university = () => {
         if (data.university === '') {
             setStyleState("label-invalid")
@@ -249,4 +248,3 @@ const EducationPage = (props) => {
 }
 
 export default EducationPage;
-

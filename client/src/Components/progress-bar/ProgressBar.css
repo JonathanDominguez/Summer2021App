@@ -7,6 +7,8 @@
     display: grid;
     grid-template-columns: 15vw 85vw;
     height: 91.5vh;
+    /* height: 10.5vh; */
+
 }
 /* Holds progress bar and buttons */
 .progress-item{
@@ -56,6 +58,7 @@ while incomplete ones are grey*/
 /* section number */
 .num-section{
     padding:0.4rem 0.4rem;
+    margin-top: 0.1rem;
 }
 /* Section title color */
 .title-blue{
@@ -73,16 +76,16 @@ while incomplete ones are grey*/
 /* Lines sizes between sections */
 .line-large{
     width: 0.1rem;
-    height: 11rem;
-    margin-top: 0.5rem;
+    height: 10rem;
+    margin-top: -0.9rem;
     margin-left: 1.5rem;
     background-color: #999999;
     transition: 0.2s;
 }
 .line-small{
     width: 0.1rem;
-    height: 1.5rem;
-    margin-top: 0.5rem;
+    height: 1rem;
+    margin-top: -1.3rem;
     margin-left: 1.5rem;
     background-color: #999999;
     transition: 0.2s;
@@ -107,42 +110,15 @@ while incomplete ones are grey*/
     width: 6rem;
     margin-bottom: 1rem;
 }
-/* =========================== */
-/* === SECOND HALF: Button === */
-/* =========================== */
-.button-container{
-    width: 75vw;
-}
-.button-grid-container {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    margin-top: -10vh;
-}
-.button-grid-item {
-    font-size: 30px;
-    margin: 10px;
-}
-.button-type{
-    border: none;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    background: #4B99C0;
-    color: #ffffff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 0.5rem;
-    margin-top: 25vh;
-}
 /* Form */
 .form-button-container {
     display: grid;
     grid-template-columns: auto;
     padding: 10px;
 }
-.form-button-item {
+/* .form-button-item {
     background-color: rgba(255, 255, 255, 0.8);
-}
+} */
 /* Responsive */
 @media screen and (max-width: 81rem) {
     .title-blue{

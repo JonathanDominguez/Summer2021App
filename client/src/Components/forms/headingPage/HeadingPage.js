@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 import './HeadingPage.css'
-// import useForm from './useFormHeading'
-// import validation from './validationHeading'
 
 const Form = (props) => {
     // Props being brought in
     const { data, handleChange, next } = props;
     // Controls button being disabled 
     const [continueMe, setContinue] = useState(false)
-    // First Input
+    // First Input: fist name
     const [styleState, setStyleState] = useState("label-default");
     const [styleStateBottom, setStyleStateBottom] = useState("bottom-border-default");
-    // Second Input
+    // Second Input: last name
     const [styleStateTwo, setStyleStateTwo] = useState("label-default");
     const [styleStateBottomTwo, setStyleStateBottomTwo] = useState("bottom-border-default");
-    // Third Input
+    // Third Input: email
     const [styleStateThree, setStyleStateThree] = useState("label-default");
     const [styleStateBottomThree, setStyleStateBottomThree] = useState("bottom-border-default");
-    // Fourth Input
+    // Fourth Input: phone number
     const [styleStateFour, setStyleStateFour] = useState("label-default");
     const [styleStateBottomFour, setStyleStateBottomFour] = useState("bottom-border-default");
     // Validation
@@ -25,7 +23,6 @@ const Form = (props) => {
     // Return false: if it is valid 
     const firstNameValidation = () => {
         if (data.firstName === '') {
-            console.log('reached firstname')
             setStyleState("label-invalid")
             setStyleStateBottom("bottom-border-invalid")
             return true 
@@ -36,7 +33,6 @@ const Form = (props) => {
     }
     const lastNameValidation = () => {
         if (data.lastName === '') {
-            console.log('reached lastname')
             setStyleStateTwo("label-invalid")
             setStyleStateBottomTwo("bottom-border-invalid")
             return true 
@@ -45,7 +41,6 @@ const Form = (props) => {
         setStyleStateBottomTwo("bottom-border-valid")
         return false
     }
-    // (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(data.usersEmail))
     const usersEmailValidation = () => {
         if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(data.usersEmail))) {
             setStyleStateThree("label-invalid")
@@ -172,8 +167,18 @@ const Form = (props) => {
                             {/* BLANK */}
                         </div>
                     </div>
-                </div>  
-                    <button  style={{marginLeft: "100px"}} onClick={check} disabled={continueMe}>Next</button>
+                </div> 
+                <div className="main-heading-form-item">
+                    <div className="button-container">
+                        <div className="button-item">
+                        </div>
+                        <div className="button-item">
+                            <div className = "right-button">
+                                <button  className = "button-type" onClick={check} disabled={continueMe}>Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     )

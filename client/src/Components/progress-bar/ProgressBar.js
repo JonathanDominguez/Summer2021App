@@ -109,23 +109,7 @@ const ProgressBar = () => {
                     <div className="form-button-item">
                         {switchForms()}
                     </div>
-                    {/* Forms */}
                     <div className="form-button-item">
-                        {/* <div className="button-grid-container">
-                            <div className="button-grid-item">
-                                <button className = "button-type" 
-                                    // onClick={minusOne} 
-                                    // disabled={backValue}
-                                >Back</button>
-                            </div>
-                            <div className="button-grid-item">
-                                <button 
-                                    className = "button-type" 
-                                    // onClick={addOne} 
-                                    // disabled={nextValue}
-                                >Continue</button>
-                            </div> 
-                        </div> */}
                     </div> 
                 </div>
             </div>
