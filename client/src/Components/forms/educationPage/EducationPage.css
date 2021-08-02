@@ -1,7 +1,7 @@
 .main-heading-form-container {
     display: grid;
     grid-template-columns: auto;
-    /* background-color: green; */
+    margin-right: 2vw;
     padding-top: 10vh;
 }
 .main-heading-form-item {

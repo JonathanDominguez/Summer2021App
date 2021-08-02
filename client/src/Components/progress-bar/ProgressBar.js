@@ -43,7 +43,6 @@ const ProgressBar = () => {
                     data={formData} 
                     handleChange={handleChange} 
                     next={next} 
-                    // inputStatus={validInput}
                     />
                 );
             case 1:
@@ -65,7 +64,7 @@ const ProgressBar = () => {
             //     />
             // );
             default:
-                // return <Submit data={formData} back={back} />;
+                return "error";
         }
     }
 

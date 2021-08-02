@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: auto;
     padding-top: 10vh;
+    margin-right: 2vw;
 }
 .main-heading-form-item {
     background-color: #fff;
@@ -80,7 +81,7 @@ input {
 
 }
 .right-button{
-    margin-left: 34.5vw;
+    margin-left: 33.5vw;
 }
 .button-type{
     border: none;

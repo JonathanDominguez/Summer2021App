@@ -13,14 +13,15 @@
 /* Holds progress bar and buttons */
 .progress-item{
     width: 100%;
-    padding: 20px;    
+    padding: 20px;
+    margin-left: 2vw;
     /* text-align: center; */
 }
 /* Holds progress bar  */
 .progress-container-div{
     margin: auto;
     width: 100%;
-    padding-top: 15vh;
+    padding-top: 13vh;
 }
 /* Child sections either margin is large (20vh) 
 or small (4vh) */
@@ -175,5 +176,3 @@ while incomplete ones are grey*/
         margin-left: -8vw;
     }
 }
-
-
