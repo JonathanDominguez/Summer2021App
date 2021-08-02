@@ -19,16 +19,18 @@ const EducationPage = (props) => {
     // Fourth Input
     const [styleStateFour, setStyleStateFour] = useState("label-default");
     const [styleStateBottomFour, setStyleStateBottomFour] = useState("bottom-border-default");
-    // Validation
-    // Return true: if is it invalid
-    // Return false: if it is valid 
-    // data
-    // (/^[\d{1}]+[-]+[\d{1}]+[-]+[\d{3}]*$/.test(textInput)
+    // Firth Input
+    const [styleStateFive, setStyleStateFive] = useState("label-default");
+    const [styleStateBottomFive, setStyleStateBottomFive] = useState("bottom-border-default");
+    // Six Input
+    const [styleStateSix, setStyleStateSix] = useState("label-default");
+    const [styleStateBottomSix, setStyleStateBottomSix] = useState("bottom-border-default");
+    // Seven Input
+    const [styleStateSeven, setStyleStateSeven] = useState("label-default");
+    const [styleStateBottomSeven, setStyleStateBottomSeven] = useState("bottom-border-default");
 
-
-    const firstNameValidation = () => {
-        if (data.firstName === '') {
-            console.log('reached firstname')
+    const university = () => {
+        if (data.university === '') {
             setStyleState("label-invalid")
             setStyleStateBottom("bottom-border-invalid")
             return true 
@@ -37,9 +39,8 @@ const EducationPage = (props) => {
         setStyleStateBottom("bottom-border-valid")
         return false
     }
-    const lastNameValidation = () => {
-        if (data.lastName === '') {
-            console.log('reached lastname')
+    const startDate = () => {
+        if (data.startDate === '') {
             setStyleStateTwo("label-invalid")
             setStyleStateBottomTwo("bottom-border-invalid")
             return true 
@@ -48,8 +49,10 @@ const EducationPage = (props) => {
         setStyleStateBottomTwo("bottom-border-valid")
         return false
     }
-    const usersEmailValidation = () => {
-        if (data.usersEmail === '') {
+    // date
+    // (/^[\d{1}]+[-]+[\d{1}]+[-]+[\d{3}]*$/.test(textInput)
+    const endDate = () => {
+        if (data.endDate === '') {
             setStyleStateThree("label-invalid")
             setStyleStateBottomThree("bottom-border-invalid")
             return true 
@@ -58,8 +61,8 @@ const EducationPage = (props) => {
         setStyleStateBottomThree("bottom-border-valid")
         return false
     }
-    const phoneNumberValidation = () => {
-        if (data.phoneNumber === '') {
+    const degree = () => {
+        if (data.degree === '') {
             setStyleStateFour("label-invalid")
             setStyleStateBottomFour("bottom-border-invalid")
             return true 
@@ -68,10 +71,40 @@ const EducationPage = (props) => {
         setStyleStateBottomFour("bottom-border-valid")
         return false
     }
-       // const [formStatus, setFormStatus] = useState()
+    const gpa = () => {
+        if (!(/^[0-4]\.\d\d$/).test(data.gpa)) {
+            setStyleStateFive("label-invalid")
+            setStyleStateBottomFive("bottom-border-invalid")
+            return true 
+        }
+        setStyleStateFive("label-valid")
+        setStyleStateBottomFive("bottom-border-valid")
+        return false
+    }
+    const courseOne = () => {
+        if (data.relevantCourseOne === '') {
+            setStyleStateSix("label-invalid")
+            setStyleStateBottomSix("bottom-border-invalid")
+            return true 
+        }
+        setStyleStateSix("label-valid")
+        setStyleStateBottomSix("bottom-border-valid")
+        return false
+    }
+    const courseTwo = () => {
+        if (data.relevantCourseTwo === '') {
+            setStyleStateSeven("label-invalid")
+            setStyleStateBottomSeven("bottom-border-invalid")
+            return true 
+        }
+        setStyleStateSeven("label-valid")
+        setStyleStateBottomSeven("bottom-border-valid")
+        return false
+    }
+
     function checkAll (){
         let setFormStatus; 
-        const validationFuncs = [firstNameValidation(), lastNameValidation(), usersEmailValidation(), phoneNumberValidation()]
+        const validationFuncs = [university(), startDate(), endDate(), degree(),gpa(),courseOne(),courseTwo()]
         for (let i = 0; i < validationFuncs.length; i++) {
             console.log(validationFuncs[i])
             // Return true = invalid 
@@ -100,6 +133,7 @@ const EducationPage = (props) => {
             <div className="main-heading-form-item">
                 <div className="column-container">
                     <div className="column-item">
+                        <span className = {styleState}>University Name</span>
                         <input 
                             type="text"
                             name="university"
@@ -108,10 +142,12 @@ const EducationPage = (props) => {
                             value={data.university}
                             onChange={handleChange}
                         />
+                        <div className = {styleStateBottom}></div>
                     </div>
                     <div className="column-item">
                         <div className="education-date-container">
                             <div className="education-date-item">
+                                <span className = {styleStateTwo}>Start Date</span>
                                 <input 
                                     type="date"
                                     name="startDate"
@@ -120,8 +156,10 @@ const EducationPage = (props) => {
                                     value={data.startDate}
                                     onChange={handleChange}
                                 />
+                                <div className = {styleStateBottomTwo}></div>
                             </div>
                             <div className="education-date-item">
+                                <span className = {styleStateThree}>End Date</span>
                                 <input 
                                     type="date"
                                     name="endDate"
@@ -130,6 +168,7 @@ const EducationPage = (props) => {
                                     value={data.endDate}
                                     onChange={handleChange}
                                 />
+                                <div className = {styleStateBottomThree}></div>
                             </div> 
                         </div>
                     </div>
@@ -139,24 +178,28 @@ const EducationPage = (props) => {
             <div className="main-heading-form-item">
                 <div className="column-container">
                     <div className="column-item">
+                        <span className = {styleStateFour}>Degree</span>
                         <input 
                             type="text"
                             name="degree"
-                            placeholder="e.g. John"
+                            placeholder="e.g. B.S. Psychology"
                             className="input-area" 
                             value={data.degree}
                             onChange={handleChange}
                         />
+                        <div className = {styleStateBottomFour}></div>
                     </div>
                     <div className="column-item">
+                        <span className = {styleStateFive}>GPA</span>
                         <input 
                             type="text"
                             name="gpa"
-                            placeholder="e.g. John"
+                            placeholder="e.g. 3.42"
                             className="input-area" 
                             value={data.gpa}
                             onChange={handleChange}
                         />
+                        <div className = {styleStateBottomFive}></div>
                     </div>
                 </div>
             </div>  
@@ -164,31 +207,35 @@ const EducationPage = (props) => {
             <div className="main-heading-form-item">
                 <div className="column-container">
                     <div className="column-item">
+                        <span className = {styleStateSix}>Relevant Coursework</span>
                         <input 
                             type="text"
                             name="relevantCourseOne"
-                            placeholder="e.g. John"
+                            placeholder="e.g. "
                             className="input-area" 
                             value={data.relevantCourseOne}
                             onChange={handleChange}
                         />
+                        <div className = {styleStateBottomSix}></div>
                     </div>
                     <div className="column-item">
+                        <span className = {styleStateSeven}>Relevant Coursework</span>
                         <input 
                             type="text"
                             name="relevantCourseTwo"
-                            placeholder="e.g. John"
+                            placeholder="e.g. Psych 10"
                             className="input-area" 
                             value={data.relevantCourseTwo}
                             onChange={handleChange}
                         />
+                        <div className = {styleStateBottomSeven}></div>
                     </div>
                 </div>
             </div>  
             <div className="main-heading-form-item">
                 <div className="column-container">
                     <div className="column-item">
-                        <button>Add course work</button>
+                        {/* <button>Add course work</button> */}
                     </div>
                     <div className="column-item">
                         {/* Blank */}

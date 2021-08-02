@@ -45,8 +45,9 @@ const Form = (props) => {
         setStyleStateBottomTwo("bottom-border-valid")
         return false
     }
+    // (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(data.usersEmail))
     const usersEmailValidation = () => {
-        if (data.usersEmail === '') {
+        if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(data.usersEmail))) {
             setStyleStateThree("label-invalid")
             setStyleStateBottomThree("bottom-border-invalid")
             return true 
@@ -56,7 +57,7 @@ const Form = (props) => {
         return false
     }
     const phoneNumberValidation = () => {
-        if (data.phoneNumber === '') {
+        if (!(/^\d{10}$/.test(data.phoneNumber))) {
             setStyleStateFour("label-invalid")
             setStyleStateBottomFour("bottom-border-invalid")
             return true 
