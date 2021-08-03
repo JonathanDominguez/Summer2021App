@@ -14,7 +14,7 @@
 .progress-item{
     width: 100%;
     padding: 20px;
-    margin-left: 2vw;
+    /* margin-left: 2vw; */
     /* text-align: center; */
 }
 /* Holds progress bar  */
