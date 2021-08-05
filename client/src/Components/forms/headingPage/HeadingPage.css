@@ -4,6 +4,9 @@
     grid-template-columns: auto;
     padding-top: 10vh;
     margin-right: 2vw;
+    background-color: #2196F3;
+    padding: 10px;
+    /* margin-left: rem; */
 }
 .main-heading-form-item {
     background-color: #fff;
@@ -17,10 +20,10 @@
     padding: 20px;
 }
 /* Inputs */
-.input-container{
+/* .input-container{
     margin:auto;
     width: 100%;
-}
+} */
 input {
 	outline: none;
 	border: none;
@@ -37,9 +40,9 @@ input {
     padding-left: 0.15rem;
     color: red;
 }
-.input-container{
+/* .input-container{
     padding: 10px 15px;
-}
+} */
 .input-area{
     width: 100%;
     border-bottom: 2px solid #d9d9d9;
@@ -73,12 +76,6 @@ input {
     /* padding: 10px; */
 }
 .button-item {
-    /* background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8); */
-    /* padding: 20px; */
-    /* text-align: center; */
-    /* margin-right: 10rem; */
-
 }
 .right-button{
     margin-left: 33.5vw;
@@ -94,7 +91,6 @@ input {
     text-align: center;
     border-radius: 0.5rem;
     margin-top: 25vh;
-    margin-right: 10rem;
 }
 @media screen and (max-width: 68rem) {
     .column-container {

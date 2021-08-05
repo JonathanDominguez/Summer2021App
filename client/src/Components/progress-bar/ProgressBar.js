@@ -64,13 +64,13 @@ const ProgressBar = () => {
             //     />
             // );
             default:
-                return "error";
+                return "NOT COMPLETED";
         }
     }
 
     return (
         <div className="main-progress-container">
-            {/* Progress Bar  */}
+            {/* ItemOne: Progress Bar  */}
             <div className="progress-item">
                 <div className = "progress-container-div">
                     <div className = {currentStep ===0 ? "section-large" : "section-small"}>
@@ -101,7 +101,7 @@ const ProgressBar = () => {
                     </div>
                 </div>
             </div>
-            {/* Button && Forms */}
+            {/* ItemTwo: Button && Forms */}
             <div className="progress-item">
                 <div className="form-button-container">
                     {/* Forms sections */}

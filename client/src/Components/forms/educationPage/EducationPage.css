@@ -1,13 +1,15 @@
-.main-heading-form-container {
+.main-heading-form {
     display: grid;
     grid-template-columns: auto;
     margin-right: 2vw;
     padding-top: 10vh;
+    background-color: #2196F3;
+    padding: 10px;
 }
 .main-heading-form-item {
     background-color: #fff;
     /* border: 1px solid purple; */
-    padding: 1vh;
+    padding: 3vh;
 }
 .column-container {
     display: grid;

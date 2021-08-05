@@ -5,23 +5,20 @@
 /* Main grid container  */
 .main-progress-container{
     display: grid;
-    grid-template-columns: 15vw 85vw;
+    grid-template-columns: 20vw 80vw;
     height: 91.5vh;
-    /* height: 10.5vh; */
-
 }
 /* Holds progress bar and buttons */
 .progress-item{
     width: 100%;
     padding: 20px;
-    /* margin-left: 2vw; */
-    /* text-align: center; */
 }
 /* Holds progress bar  */
 .progress-container-div{
     margin: auto;
     width: 100%;
     padding-top: 13vh;
+    margin-left: 2vw;
 }
 /* Child sections either margin is large (20vh) 
 or small (4vh) */
@@ -117,9 +114,6 @@ while incomplete ones are grey*/
     grid-template-columns: auto;
     padding: 10px;
 }
-/* .form-button-item {
-    background-color: rgba(255, 255, 255, 0.8);
-} */
 /* Responsive */
 @media screen and (max-width: 81rem) {
     .title-blue{
@@ -133,6 +127,12 @@ while incomplete ones are grey*/
         margin-left: 4rem;
         font-size: 20px;
         color: #999;
+    }
+    .line-large{
+        margin-top: 0.1rem;
+    }
+    .line-small{
+        margin-top: -0.6rem;
     }
     .button-grid-container {
         display: grid;
@@ -156,9 +156,9 @@ while incomplete ones are grey*/
         display: grid;
         grid-template-columns: 60% 40%;
     }
-    .button-type{
+    /* .button-type{
         margin-top: 1vh;
-    }
+    } */
 }
 @media screen and (max-width: 50rem) {
     .button-grid-container {

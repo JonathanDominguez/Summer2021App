@@ -127,7 +127,7 @@ const EducationPage = (props) => {
     }
 
     return (
-        <div className="main-heading-form-container">
+        <div className="main-heading-form">
             {/* Top row */}
             <div className="main-heading-form-item">
                 <div className="column-container">
