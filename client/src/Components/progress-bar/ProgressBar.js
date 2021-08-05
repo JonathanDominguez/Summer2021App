@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ProgressBar.css';
 import Form from '../forms/headingPage/HeadingPage';
 import EducationForm from '../forms/educationPage/EducationPage'
+import DownLoads from '../download-version/DownloadVersion'
 
 const ProgressBar = () => { 
     const [currentStep, setCurrentStep] = useState(0);
@@ -40,29 +41,26 @@ const ProgressBar = () => {
             case 0:
                 return (
                     <Form 
-                    data={formData} 
-                    handleChange={handleChange} 
-                    next={next} 
+                        data={formData} 
+                        handleChange={handleChange} 
+                        next={next} 
                     />
                 );
             case 1:
                 return (
                     <EducationForm
-                    data={formData}
-                    handleChange={handleChange}
-                    next={next}
-                    back={back}
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
                     />
                 );
-            // case 3:
-            // return (
-            //     <Step3
-            //     data={formData}
-            //     handleChange={handleChange}
-            //     next={next}
-            //     back={back}
-            //     />
-            // );
+            case 2:
+                return (
+                    <DownLoads
+                        data={formData} 
+                    />
+            );
             default:
                 return "NOT COMPLETED";
         }
