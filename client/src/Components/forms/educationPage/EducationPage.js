@@ -234,12 +234,14 @@ const EducationPage = (props) => {
             <div className="main-heading-form-item">
                 <div className="column-container">
                     <div className="column-item">
+                        <button className = "button-left" onClick={back}>Back</button> 
                         {/* <button>Add course work</button> */}
                     </div>
                     <div className="column-item">
                         {/* Blank */}
-                        <button onClick={back}>Back</button> 
-                        <button  style={{marginLeft: "100px"}} onClick={check} disabled={continueMe}>Next</button>
+                        <div className = "right-button">
+                            <button className = "button-right"onClick={check} disabled={continueMe}>Next</button>
+                        </div>
                     </div>
                 </div>
             </div>  

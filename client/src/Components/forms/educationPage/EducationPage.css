@@ -3,13 +3,13 @@
     grid-template-columns: auto;
     margin-right: 2vw;
     padding-top: 10vh;
-    background-color: #2196F3;
+    /* background-color: #2196F3; */
     padding: 10px;
 }
 .main-heading-form-item {
     background-color: #fff;
     /* border: 1px solid purple; */
-    padding: 3vh;
+    padding: 1vh;
 }
 .column-container {
     display: grid;
@@ -27,41 +27,6 @@
 .education-date-item {
     /* blank */
 }
-/* Responsive */
-@media screen and (max-width: 68rem) {
-    .main-heading-form-container {
-        /* display: grid;
-        background-color: green; */
-        /* grid-template-columns: 80%; */
-        /* background-color: red; */
-        padding-top: 1vh;
-    }
-    /* .main-heading-form-item {
-        background-color: #fff;
-        border: 1px solid purple;
-        padding: 1vh;
-    } */
-    .column-container {
-        display: grid;
-        grid-template-columns: auto;
-        /* background-color: yellow; */
-    }
-    .education-date-container {
-        display: grid;
-        grid-template-columns: auto;
-    }
-    /* .column-item {
-        border: 1px solid rgba(131, 223, 101, 0.8);
-        padding-right: 20px;
-    }
-
-    .education-date-item {
-    } */
-}
-@media screen and (max-width: 68rem) {
-
-}
-
 /* Inputs */
 .input-container{
     margin:auto;
@@ -114,4 +79,67 @@ input {
     height: 0.1rem;
     background: red;
 }
+.button-left {
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background: #4B99C0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-top: 27vh;
+}
+.button-right {
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background: #4B99C0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-top: 27vh;
+}
+.right-button{
+    margin: auto;
+    width: 5rem;
+    /* background-color: blue; */
+    margin-right: 1px;
+}
 
+/* Responsive */
+@media screen and (max-width: 68rem) {
+    .main-heading-form-container {
+        /* display: grid;
+        background-color: green; */
+        /* grid-template-columns: 80%; */
+        /* background-color: red; */
+        padding-top: 1vh;
+    }
+    /* .main-heading-form-item {
+        background-color: #fff;
+        border: 1px solid purple;
+        padding: 1vh;
+    } */
+    .column-container {
+        display: grid;
+        grid-template-columns: auto;
+        /* background-color: yellow; */
+    }
+    .education-date-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    /* .column-item {
+        border: 1px solid rgba(131, 223, 101, 0.8);
+        padding-right: 20px;
+    }
+    .education-date-item {
+    } */
+}
+@media screen and (max-width: 68rem) {
+
+}
