@@ -1,8 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './LandingPage.css'
 import resumeImage from '../../images/sample.png'
 import Background from './background/Background'
-
 
 const LandingPage = () => {
     return(
@@ -22,7 +22,7 @@ const LandingPage = () => {
                         <div className = "text">
                             <p>You input.</p>
                             <p>We generate.</p>
-                            <button className = "start-button">Build Resume/ Cover Letter Now</button>
+                            <Link to = "/PDF" className = "start-button" >Build Resume/ Cover Letter Now</Link>
                         </div>
                     </div>
                 </div> 
