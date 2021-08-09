@@ -22,7 +22,7 @@ const LandingPage = () => {
                         <div className = "text">
                             <p>You input.</p>
                             <p>We generate.</p>
-                            <Link to = "/PDF" className = "start-button" >Build Resume/ Cover Letter Now</Link>
+                            <Link to = "/OptionPage" className = "start-button" >Build Resume/ Cover Letter Now</Link>
                         </div>
                     </div>
                 </div> 

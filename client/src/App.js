@@ -1,10 +1,10 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 // Components
 import NavBar from './Components/nav-bar/NavBar'
 import LandingPage from './Components/landing-page/LandingPage'
 import ProgressBar from './Components/progress-bar/ProgressBar'
-// import DownloadVersion from './Components/download-version/DownloadVersion'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import OptionPage from './Components/optionPage/OptionPage';
 
 function App() {
     return (
@@ -18,8 +18,10 @@ function App() {
                     <Route exact path = '/PDF'>
                       <ProgressBar />
                     </Route>
+                    <Route exact path = '/OptionPage'>
+                      <OptionPage />
+                    </Route>
                 </Switch>
-              {/* <DownloadVersion /> */}
             </Router>
         </div>
     );
