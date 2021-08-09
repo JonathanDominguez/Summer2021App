@@ -2,25 +2,60 @@ import React, { useState } from 'react';
 import './ProgressBar.css';
 import Form from '../forms/headingPage/HeadingPage';
 import EducationForm from '../forms/educationPage/EducationPage'
+import ExperienceOne from '../forms/experienceOne/ExperienceOne'
+import ExperienceTwo from '../forms/experienceTwo/ExperienceTwo'
+import ExperienceThree from '../forms/experienceThree/ExperinecThree'
 import DownLoads from '../download-version/DownloadVersion'
 
 const ProgressBar = () => { 
     const [currentStep, setCurrentStep] = useState(0);
     // const [validInput, setValidInput] = useState("label-default");
     const [formData, setFormData] = useState({
+        // Heading Form
         firstName: '',
         lastName: '',
         usersEmail: '',
         phoneNumber: '',
         linkOne: '',
         linkTwo: '',
+        // Education Form
         university: '',
         startDate: '',
         endDate:'',
         degree:'',
         gpa:'',
         relevantCourseOne:'',
-        relevantCourseTwo:''
+        relevantCourseTwo:'',
+        // First Experience
+        companyOne: '',
+        locationOne: '',
+        titleOne: '',
+        startOne: '',
+        endOne: '',
+        experienceOneOne:'',
+        experienceOneTwo:'',
+        experienceOneThree:'',
+        experienceOneFour:'',
+        // Second Experience
+        companyTwo: '',
+        locationTwo: '',
+        titleTwo: '',
+        startTwo: '',
+        endTwo: '',
+        experienceTwoOne:'',
+        experienceTwoTwo:'',
+        experienceTwoThree:'',
+        experienceTwoFour:'',
+        // Third Experience
+        companyThree: '',
+        locationThree: '',
+        titleThree: '',
+        startThree: '',
+        endThree: '',
+        experienceThreeOne:'',
+        experienceThreeTwo:'',
+        experienceThreeThree:'',
+        experienceThreeFour:'',
     });
 
     const handleChange = (event) => {
@@ -58,12 +93,37 @@ const ProgressBar = () => {
                 );
             case 2:
                 return (
-                    <DownLoads
-                        data={formData} 
+                    <ExperienceOne
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
+                    />
+            );
+            case 3:
+                return (
+                    <ExperienceTwo
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
+                    />
+            );
+            case 4:
+                return (
+                    <ExperienceThree
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
                     />
             );
             default:
-                return "NOT COMPLETED";
+                return (
+                    <DownLoads
+                        data={formData} 
+                    />
+            );    
         }
     }
 
