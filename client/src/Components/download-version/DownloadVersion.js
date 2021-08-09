@@ -4,7 +4,6 @@ import resumeImage from '../../images/sample.png'
 import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import download from 'downloadjs'
 
-
 const DownloadVersion = (props) => {
     const { data, back } = props;
 
