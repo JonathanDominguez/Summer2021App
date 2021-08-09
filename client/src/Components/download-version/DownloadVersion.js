@@ -6,7 +6,7 @@ import download from 'downloadjs'
 
 
 const DownloadVersion = (props) => {
-    const { data } = props;
+    const { data, back } = props;
 
     async function downlodPdf() {
         const url = 'https://pdf-lib.js.org/assets/with_update_sections.pdf';
@@ -63,6 +63,9 @@ const DownloadVersion = (props) => {
                             </div>                                       
                         </div> 
                     </div>
+                </div>
+                <div className="main-item-button">
+                    <button className = "button-left" onClick={back}>Back</button> 
                 </div>
             </div>
         </div>

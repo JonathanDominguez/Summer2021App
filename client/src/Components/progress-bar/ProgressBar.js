@@ -4,7 +4,8 @@ import Form from '../forms/headingPage/HeadingPage';
 import EducationForm from '../forms/educationPage/EducationPage'
 import ExperienceOne from '../forms/experienceOne/ExperienceOne'
 import ExperienceTwo from '../forms/experienceTwo/ExperienceTwo'
-import ExperienceThree from '../forms/experienceThree/ExperinecThree'
+import ExperienceThree from '../forms/experienceThree/ExperienceThree'
+import AdditionalForm from '../forms/additionalForm/AdditionalForm'
 import DownLoads from '../download-version/DownloadVersion'
 
 const ProgressBar = () => { 
@@ -56,6 +57,13 @@ const ProgressBar = () => {
         experienceThreeTwo:'',
         experienceThreeThree:'',
         experienceThreeFour:'',
+        // Additional Skills
+        certificates: '',
+        languages: '',
+        software: '',
+        volunteerWork: '',
+        interests: '',
+        other: ''
     });
 
     const handleChange = (event) => {
@@ -118,11 +126,25 @@ const ProgressBar = () => {
                         back={back}
                     />
             );
-            default:
+            case 5:
+                return (
+                    <AdditionalForm
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
+                    />
+            );
+            case 6:
                 return (
                     <DownLoads
-                        data={formData} 
+                        data={formData}
+                        back={back}
                     />
+            );
+            default:
+                return (
+                    <p>Error</p>
             );    
         }
     }
@@ -156,7 +178,7 @@ const ProgressBar = () => {
                     </div>
                     <div className = {currentStep === 5 ? "section-large" : "section-small"}>
                         <div className = {currentStep >=5 ? "section-number-blue" : "section-number-grey"}><p className = "num-section">4</p></div>
-                        <p className = {currentStep >=5 ? "title-blue" : "title-grey"}>Skills</p>
+                        <p className = {currentStep >=5 ? "title-blue" : "title-grey"}>Additional</p>
                     </div>
                 </div>
             </div>
