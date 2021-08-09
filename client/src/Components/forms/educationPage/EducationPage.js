@@ -70,40 +70,40 @@ const EducationPage = (props) => {
         setStyleStateBottomFour("bottom-border-valid")
         return false
     }
-    const gpa = () => {
-        if (!(/^[0-4]\.\d\d$/).test(data.gpa)) {
-            setStyleStateFive("label-invalid")
-            setStyleStateBottomFive("bottom-border-invalid")
-            return true 
-        }
-        setStyleStateFive("label-valid")
-        setStyleStateBottomFive("bottom-border-valid")
-        return false
-    }
-    const courseOne = () => {
-        if (data.relevantCourseOne === '') {
-            setStyleStateSix("label-invalid")
-            setStyleStateBottomSix("bottom-border-invalid")
-            return true 
-        }
-        setStyleStateSix("label-valid")
-        setStyleStateBottomSix("bottom-border-valid")
-        return false
-    }
-    const courseTwo = () => {
-        if (data.relevantCourseTwo === '') {
-            setStyleStateSeven("label-invalid")
-            setStyleStateBottomSeven("bottom-border-invalid")
-            return true 
-        }
-        setStyleStateSeven("label-valid")
-        setStyleStateBottomSeven("bottom-border-valid")
-        return false
-    }
+    // const gpa = () => {
+    //     if (!(/^[0-4]\.\d\d$/).test(data.gpa)) {
+    //         setStyleStateFive("label-invalid")
+    //         setStyleStateBottomFive("bottom-border-invalid")
+    //         return true 
+    //     }
+    //     setStyleStateFive("label-valid")
+    //     setStyleStateBottomFive("bottom-border-valid")
+    //     return false
+    // }
+    // const courseOne = () => {
+    //     if (data.relevantCourseOne === '') {
+    //         setStyleStateSix("label-invalid")
+    //         setStyleStateBottomSix("bottom-border-invalid")
+    //         return true 
+    //     }
+    //     setStyleStateSix("label-valid")
+    //     setStyleStateBottomSix("bottom-border-valid")
+    //     return false
+    // }
+    // const courseTwo = () => {
+    //     if (data.relevantCourseTwo === '') {
+    //         setStyleStateSeven("label-invalid")
+    //         setStyleStateBottomSeven("bottom-border-invalid")
+    //         return true 
+    //     }
+    //     setStyleStateSeven("label-valid")
+    //     setStyleStateBottomSeven("bottom-border-valid")
+    //     return false
+    // }
 
     function checkAll (){
         let setFormStatus; 
-        const validationFuncs = [university(), startDate(), endDate(), degree(),gpa(),courseOne(),courseTwo()]
+        const validationFuncs = [university(), startDate(), endDate(), degree()]
         for (let i = 0; i < validationFuncs.length; i++) {
             console.log(validationFuncs[i])
             // Return true = invalid 
@@ -148,7 +148,7 @@ const EducationPage = (props) => {
                             <div className="education-date-item">
                                 <span className = {styleStateTwo}>Start Date</span>
                                 <input 
-                                    type="date"
+                                    type="month"
                                     name="startDate"
                                     placeholder="e.g. John"
                                     className="input-area" 
@@ -158,11 +158,11 @@ const EducationPage = (props) => {
                                 <div className = {styleStateBottomTwo}></div>
                             </div>
                             <div className="education-date-item">
-                                <span className = {styleStateThree}>End Date</span>
+                                <span className = {styleStateThree}>Graduation Date</span>
                                 <input 
-                                    type="date"
+                                    type="text"
                                     name="endDate"
-                                    placeholder="e.g. John"
+                                    placeholder="e.g. Present"
                                     className="input-area" 
                                     value={data.endDate}
                                     onChange={handleChange}
@@ -189,7 +189,7 @@ const EducationPage = (props) => {
                         <div className = {styleStateBottomFour}></div>
                     </div>
                     <div className="column-item">
-                        <span className = {styleStateFive}>GPA</span>
+                        <span className = 'label-default'>GPA (optional)</span>
                         <input 
                             type="text"
                             name="gpa"
@@ -198,7 +198,7 @@ const EducationPage = (props) => {
                             value={data.gpa}
                             onChange={handleChange}
                         />
-                        <div className = {styleStateBottomFive}></div>
+                        <div className = 'bottom-border-default'></div>
                     </div>
                 </div>
             </div>  
@@ -206,7 +206,7 @@ const EducationPage = (props) => {
             <div className="main-heading-form-item">
                 <div className="column-container">
                     <div className="column-item">
-                        <span className = {styleStateSix}>Relevant Coursework</span>
+                        <span className = 'label-default'>Relevant Coursework (optional)</span>
                         <input 
                             type="text"
                             name="relevantCourseOne"
@@ -215,10 +215,10 @@ const EducationPage = (props) => {
                             value={data.relevantCourseOne}
                             onChange={handleChange}
                         />
-                        <div className = {styleStateBottomSix}></div>
+                        <div className =  'bottom-border-default'></div>
                     </div>
                     <div className="column-item">
-                        <span className = {styleStateSeven}>Relevant Coursework</span>
+                        <span className = 'label-default'>Relevant Coursework (optional)</span>
                         <input 
                             type="text"
                             name="relevantCourseTwo"
@@ -227,7 +227,7 @@ const EducationPage = (props) => {
                             value={data.relevantCourseTwo}
                             onChange={handleChange}
                         />
-                        <div className = {styleStateBottomSeven}></div>
+                        <div className =  'bottom-border-default'></div>
                     </div>
                 </div>
             </div>  

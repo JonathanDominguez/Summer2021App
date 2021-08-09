@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './HeadingPage.css'
+import { IoIosAddCircleOutline } from 'react-icons/io';
 
 const Form = (props) => {
     // Props being brought in
@@ -61,7 +62,17 @@ const Form = (props) => {
         setStyleStateBottomFour("bottom-border-valid")
         return false
     }
-
+    // Show link
+    const [showOption, setShow] = useState()
+    const showLink = (event) => {
+        event.preventDefault();
+        setShow(true)
+    }
+    const [showOptionTwo, setShowTwo] = useState()
+    const showLinkTwo = (event) => {
+        event.preventDefault();
+        setShowTwo(true)
+    }
     // const [formStatus, setFormStatus] = useState()
     function checkAll (){
         let setFormStatus; 
@@ -161,10 +172,48 @@ const Form = (props) => {
                 <div className="main-heading-form-item">
                     <div className="column-container">
                         <div className="column-item">
-                            {/* <button>Add Link</button>*/}
+                            <div className="input-container">
+                                <button 
+                                    onClick={showLink} 
+                                    className = {showOption ? 'disableButton': 'showButton'}> 
+                                    <IoIosAddCircleOutline className = "add-icon" />
+                                    <span className = 'text-add'>Add Link</span>
+                                </button>
+                                <div className = {showOption ? 'showLinkOne': 'disableInput'}>
+                                    <span className = 'label-default'>Link (optional)</span>
+                                    <input
+                                            type="tel"
+                                            name="linkOne"
+                                            placeholder="e.g. LinkedIn"
+                                            className = 'input-area'
+                                            value={data.linkOne}
+                                            onChange={handleChange} 
+                                        />
+                                    <div className = 'bottom-border-default'></div>
+                                </div>
+                            </div>
                         </div>
                         <div className="column-item">
-                            {/* BLANK */}
+                            <div className="input-container">
+                                <button 
+                                    onClick={showLinkTwo} 
+                                    className = {showOptionTwo ? 'disableButton': 'showButton'}> 
+                                    <IoIosAddCircleOutline className = "add-icon" />
+                                    <span className = 'text-add'>Add Link</span>
+                                </button>
+                                <div className = {showOptionTwo ? 'showLinkOne': 'disableInput'}>
+                                    <span className = 'label-default'>Link (optional)</span>
+                                    <input
+                                            type="tel"
+                                            name="linkOneTwo"
+                                            placeholder="e.g. GitHub"
+                                            className = 'input-area'
+                                            value={data.linkOneTwo}
+                                            onChange={handleChange} 
+                                        />
+                                    <div className = 'bottom-border-default'></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div> 
@@ -174,7 +223,7 @@ const Form = (props) => {
                         </div>
                         <div className="button-item">
                             <div className = "right-button">
-                                <button  className = "button-type" onClick={check} disabled={continueMe}>Next</button>
+                                <button  className = "button-type-next" onClick={check} disabled={continueMe}>Next</button>
                             </div>
                         </div>
                     </div>

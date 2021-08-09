@@ -67,6 +67,31 @@ input {
     height: 0.1rem;
     background: red;
 }
+/* Add Link */
+.add-icon{
+    text-align: center;
+    padding: 1px 2px;
+    font-size: 20px;
+}
+.showLinkOne{
+    display: block;
+}
+.showButton{
+    border: none;
+    background-color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+.disableInput{
+    display: none;
+}
+.disableButton{
+    display: none;
+}
+.text-add{
+    padding: 1px 20px;
+    margin-bottom: 1px;
+}
 /* button */
 .button-container {
     display: grid;
@@ -85,7 +110,7 @@ input {
     /* background-color: blue; */
     margin-right: 1px;
 }
-.button-type{
+.button-type-next{
     border: none;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -95,7 +120,7 @@ input {
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
-    margin-top: 27vh;
+    margin-top: 20vh;
 }
 @media screen and (max-width: 68rem) {
     .column-container {

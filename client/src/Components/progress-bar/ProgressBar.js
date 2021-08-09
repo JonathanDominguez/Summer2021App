@@ -12,6 +12,8 @@ const ProgressBar = () => {
         lastName: '',
         usersEmail: '',
         phoneNumber: '',
+        linkOne: '',
+        linkTwo: '',
         university: '',
         startDate: '',
         endDate:'',
@@ -30,7 +32,6 @@ const ProgressBar = () => {
 
     const next = () => {
         setCurrentStep(currentStep + 1);
-        console.log(formData.firstName)
     };
         const back = () => {
         setCurrentStep(currentStep - 1);
