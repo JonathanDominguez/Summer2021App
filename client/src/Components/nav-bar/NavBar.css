@@ -6,6 +6,10 @@
     justify-content: space-between;
     font-family: 'Abhaya Libre', serif;
 }
+.logo-button{
+    text-decoration: none;
+    color: inherit;
+}
 .navbar-logo{
     padding-left: 100px;
     color: #fff;

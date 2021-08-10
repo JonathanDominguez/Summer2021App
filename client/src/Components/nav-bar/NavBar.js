@@ -9,7 +9,9 @@ const NavBar = () => {
 
     return(
         <nav className = "NavBar">
-            <h1 className = "navbar-logo">LOGO</h1>
+            <a className ='logo-button' href = '/'>
+                <h1 className = "navbar-logo">LOGO</h1>
+            </a>
             <div className = 'triangle-center'></div>
             <div className = 'right-side-nav'>
                 {/* Web */}
