@@ -5,6 +5,9 @@ import NavBar from './Components/nav-bar/NavBar'
 import LandingPage from './Components/landing-page/LandingPage'
 import ProgressBar from './Components/progress-bar/ProgressBar'
 import OptionPage from './Components/optionPage/OptionPage';
+import CoverLetter from './Components/coverletterPage/hold';
+import ContactUs from './Components/contactUsPage/holder';
+import AboutUs from './Components/aboutPage/about';
 
 function App() {
     return (
@@ -20,6 +23,15 @@ function App() {
                     </Route>
                     <Route exact path = '/OptionPage'>
                       <OptionPage />
+                    </Route>
+                    <Route exact path = '/CoverLetter'>
+                      <CoverLetter />
+                    </Route>
+                    <Route exact path = '/Contact'>
+                      <ContactUs />
+                    </Route>
+                    <Route exact path = '/About'>
+                      <AboutUs />
                     </Route>
                 </Switch>
             </Router>
