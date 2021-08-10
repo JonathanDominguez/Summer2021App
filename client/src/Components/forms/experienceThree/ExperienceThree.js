@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ExperienceThree.css'
-import { IoIosAddCircleOutline } from 'react-icons/io';
 
 const Form = (props) => {
     // Props being brought in

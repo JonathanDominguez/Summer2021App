@@ -1,41 +1,10 @@
-.main-contain{
+.main{
     margin: auto;
     width: 100%;
     position: absolute;
     top: 15vh;
     left: 0;
 }
-/* Main grid  */
-/* .choice-container {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: #2196F3;
-    padding: 10px;
-    height: 85vh;
-}
-.choice-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-} */
-/* Image and button */
-/* .section-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: #2196F3;
-    padding: 10px;
-}
-.section-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-} */
-
-
 .main-container {
     display: grid;
     grid-template-columns: auto;
@@ -50,7 +19,7 @@
     font-size: 30px;
     text-align: center;
 }
-.text-box{
+.text-container{
     height: 6vh;
     margin-bottom: 2vh;
 }
@@ -59,12 +28,12 @@
     color: #fff;
     font-family: 'Abhaya Libre', serif;
 }
-.download-container {
+.options-container {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 10px 1px;
+    padding: 75px 1px;
 }
-.download-item {
+.options-item {
     margin-bottom: 15vh;
     font-size: 30px;
     text-align: center;
@@ -80,8 +49,9 @@
     font-size: 30px;
     text-align: center;
     padding-bottom: 1px;
+    margin-bottom: 5vh;
 }
-.image-fix{
+.image-edit{
     height: 45vh;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -97,12 +67,6 @@
     border-radius: 0.5rem;
     margin-top: 3vh;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-.main-item-button{
-
-}
-.button-left{
-    margin-top: 0vh;
 }
 @media screen and (max-width: 75rem) {
     .heading-text{
@@ -124,15 +88,29 @@
     .heading-text{
         font-size: 2.5rem;
     }
-    .download-container {
+    .text-container{
+        height: 1vh;
+        margin-bottom: 0vh;
+        padding-bottom: 10px;
+    }
+    .options-container {
         display: grid;
         grid-template-columns: auto;
-        padding: 10px;
+        margin-top: 0px;
     }
-    .image-fix{
-        height: 30vh;
+    .image-edit{
+        height: 15vh;
     }
-    .download-item {
-        height: 50vh;
+    .main-item {
+        height: 1vh;
+    }
+    .options-item {
+        margin-bottom: 0vh;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: -32px;
+    }
+    .image-item {
+        margin-bottom: 1vh;
     }
 }

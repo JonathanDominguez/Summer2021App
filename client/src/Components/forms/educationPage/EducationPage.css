@@ -3,19 +3,17 @@
     grid-template-columns: auto;
     margin-right: 2vw;
     padding-top: 10vh;
-    /* background-color: #2196F3; */
     padding: 10px;
     margin-top: 8vh;
+    width: 100%;
 }
 .main-heading-form-item {
     background-color: #fff;
-    /* border: 1px solid purple; */
     padding: 1vh;
 }
 .column-container {
     display: grid;
     grid-template-columns: 50% 50%;
-    /* background-color: yellow; */
 }
 .column-item {
     padding: 30px;
@@ -23,17 +21,9 @@
 .education-date-container {
     display: grid;
     grid-template-columns: 47% 47%;
-
     grid-column-gap: 6%;
 }
-.education-date-item {
-}
 /* Inputs */
-.input-container{
-    margin:auto;
-    width: 100%;
-}
-/*  */
 .label-default{
     padding-left: 0.15rem;
 }
@@ -51,24 +41,12 @@ input {
 	border: none;
     background-color: #fff;
 }
-.input-container{
-    padding: 10px 15px;
-}
 .input-area{
     width: 100%;
     border-bottom: 2px solid #d9d9d9;
     border-style:none;
     font-size: 1.5rem;
 }  
-/* start date  */
-/* .input-area-date{
-    width: 100%;
-    border-bottom: 2px solid #d9d9d9;
-    border-style:none;
-    font-size: 1.5rem;
-    margin-right: 50px;
-}   */
-/* Bottom line */
 .bottom-border-default{
     margin-top: 0px;
     width: 100%;
@@ -87,7 +65,12 @@ input {
     height: 0.1rem;
     background: red;
 }
-.button-left {
+/* Buttons */
+.button-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.button-left-two{
     border: none;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -97,7 +80,6 @@ input {
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
-    margin-top: 22vh;
 }
 .button-right {
     border: none;
@@ -109,45 +91,24 @@ input {
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
-    margin-top: 22vh;
 }
 .right-button{
     margin: auto;
     width: 5rem;
-    /* background-color: blue; */
     margin-right: 1px;
 }
-
 /* Responsive */
 @media screen and (max-width: 68rem) {
     .main-heading-form-container {
-        /* display: grid;
-        background-color: green; */
-        /* grid-template-columns: 80%; */
-        /* background-color: red; */
         padding-top: 1vh;
     }
-    /* .main-heading-form-item {
-        background-color: #fff;
-        border: 1px solid purple;
-        padding: 1vh;
-    } */
     .column-container {
         display: grid;
         grid-template-columns: auto;
-        /* background-color: yellow; */
     }
     .education-date-container {
         display: grid;
         grid-template-columns: auto;
+        grid-row-gap: 3.7vh;
     }
-    /* .column-item {
-        border: 1px solid rgba(131, 223, 101, 0.8);
-        padding-right: 20px;
-    }
-    .education-date-item {
-    } */
-}
-@media screen and (max-width: 68rem) {
-
 }

@@ -14,7 +14,7 @@ const DownloadVersion = (props) => {
         const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
         const pages = pdfDoc.getPages();
         const firstPage = pages[0];
-        const { width, height } = firstPage.getSize();
+        const { height } = firstPage.getSize();
         firstPage.drawText(data.firstName, {
         x: 5,
         y: height / 2 + 300,
@@ -30,6 +30,11 @@ const DownloadVersion = (props) => {
     function downlodDoc (){
         console.log('IN progress')
     }
+    // Converts phoneNum to (###) ###- ####
+    // const numberConverter = (phoneNum) => {
+    //     return '(' + phoneNum.substring(0, 3) + ') ' + phoneNum.substring(3, 6) + ' - ' + phoneNum.substring(6, 10);
+    
+    // }
 
     return (
         <div>

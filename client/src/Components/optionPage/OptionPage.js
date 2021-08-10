@@ -1,39 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Background from '../landing-page/background/Background';
 import './OptionPage.css';
+import Background from '../landing-page/background/Background';
 import resumeImage from '../../images/sample.png'
 
 export default function OptionPage() {
     return (
-        <div>
+        <div className = 'background'>
             <Background/>
-            <div className = "main-contain">
+            <div className = "main">
                 <div className="main-container">
                     <div className="main-item">
-                        <div className = "text-box">
+                        <div className = "text-container">
                             <p className = "heading-text">Which would you like to work on?</p>
                         </div>
                     </div>
                     <div className="main-item">
-                        <div className="download-container">
-                            <div className="download-item">
+                        <div className="options-container">
+                            <div className="options-item">
                                 <div className="image-container">
                                     <div className="image-item">
-                                        <img src={resumeImage} className = "image-fix" alt ="resume"/>
+                                        <img src={resumeImage} className = "image-edit" alt ="resume"/>
                                     </div>
                                     <div className="image-item">
-                                        <Link to = "/PDF" className = "start-button">Resume</Link>
+                                        <Link to = "/PDF" className = "button-type">Resume</Link>
                                     </div> 
                                 </div>
                             </div>
-                            <div className="download-item">
+                            <div className="options-item">
                                 <div className="image-container">
                                     <div className="image-item">
-                                        <img src={resumeImage} className = "image-fix" alt ="resume"/>
+                                        <img src={resumeImage} className = "image-edit" alt ="resume"/>
                                     </div>
                                     <div className="image-item">
-                                        <button className = "button-type">Cover Letter</button>
+                                        <Link to = "/PDF" className = "button-type">Cover Letter</Link>
                                     </div> 
                                 </div>                                       
                             </div> 

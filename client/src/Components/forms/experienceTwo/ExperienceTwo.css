@@ -68,19 +68,8 @@ input {
     background: red;
 }
 /* Add Link */
-.add-icon{
-    text-align: center;
-    padding: 1px 2px;
-    font-size: 20px;
-}
 .showLinkOne{
     display: block;
-}
-.showButton{
-    border: none;
-    background-color: white;
-    text-align: center;
-    font-size: 1rem;
 }
 .disableInput{
     display: none;
@@ -110,7 +99,7 @@ input {
     /* background-color: blue; */
     margin-right: 1px;
 }
-.button-type-next{
+.button-type-next-two{
     border: none;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -120,7 +109,7 @@ input {
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
-    margin-top: 12vh;
+    margin-top: 0vh;
 }
 .button-left {
     border: none;
@@ -132,7 +121,7 @@ input {
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
-    margin-top: 12vh;
+    margin-top: 0vh;
 }
 /* Date grid */
 .date-container {

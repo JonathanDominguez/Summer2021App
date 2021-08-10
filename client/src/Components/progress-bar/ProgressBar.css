@@ -75,7 +75,7 @@ while incomplete ones are grey*/
 .line-large{
     width: 0.1rem;
     height: 10rem;
-    margin-top: -0.9rem;
+    margin-top: 1rem;
     margin-left: 1.5rem;
     background-color: #999999;
     transition: 0.2s;
@@ -83,7 +83,7 @@ while incomplete ones are grey*/
 .line-small{
     width: 0.1rem;
     height: 1rem;
-    margin-top: -1.3rem;
+    margin-top: 0.7rem;
     margin-left: 1.5rem;
     background-color: #999999;
     transition: 0.2s;

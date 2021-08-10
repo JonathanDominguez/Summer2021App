@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ExperienceTwo.css'
-import { IoIosAddCircleOutline } from 'react-icons/io';
 
 const Form = (props) => {
     // Props being brought in
@@ -268,7 +267,7 @@ const Form = (props) => {
                         </div>
                         <div className="button-item">
                             <div className = "right-button">
-                                <button  className = "button-type-next" onClick={check} disabled={continueMe}>Next</button>
+                                <button  className = "button-type-next-two" onClick={check} disabled={continueMe}>Next</button>
                             </div>
                         </div>
                     </div>

@@ -18,18 +18,9 @@ const EducationPage = (props) => {
     // Fourth Input: degree
     const [styleStateFour, setStyleStateFour] = useState("label-default");
     const [styleStateBottomFour, setStyleStateBottomFour] = useState("bottom-border-default");
-    // Firth Input: GPA
-    const [styleStateFive, setStyleStateFive] = useState("label-default");
-    const [styleStateBottomFive, setStyleStateBottomFive] = useState("bottom-border-default");
-    // Six Input: course work
-    const [styleStateSix, setStyleStateSix] = useState("label-default");
-    const [styleStateBottomSix, setStyleStateBottomSix] = useState("bottom-border-default");
-    // Seven Input: course work
-    const [styleStateSeven, setStyleStateSeven] = useState("label-default");
-    const [styleStateBottomSeven, setStyleStateBottomSeven] = useState("bottom-border-default");
     // Functions for validation as well as setting the css validation
     const university = () => {
-        if (data.university === '') {
+        if (!(/^[a-zA-Z]*$/.test(data.university)) || data.university === '') {
             setStyleState("label-invalid")
             setStyleStateBottom("bottom-border-invalid")
             return true 
@@ -48,20 +39,53 @@ const EducationPage = (props) => {
         setStyleStateBottomTwo("bottom-border-valid")
         return false
     }
-    // date
-    // (/^[\d{1}]+[-]+[\d{1}]+[-]+[\d{3}]*$/.test(textInput)
+
+    const monthChecker = (userInput) => {
+        let correctMonth = userInput.substr(0,userInput.indexOf(' '));
+        let months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+        for (let i = 0; i < months.length; i++) {
+            if(months[i] === correctMonth){
+                console.log("similar " +months[i])
+                return true
+            }
+        }
+        return false
+    }
+    const yearChecker = (year)=>{
+        let yearHolder = year.substring(year.indexOf(' ')+1, year.length);
+        if(/^\d{4}$/.test(yearHolder)){
+            console.log('its a year')
+            return true
+        }
+        console.log('not a year')
+        return false
+    }
     const endDate = () => {
-        if (data.endDate === '') {
+        if(data.endDate === ''){
             setStyleStateThree("label-invalid")
             setStyleStateBottomThree("bottom-border-invalid")
             return true 
         }
-        setStyleStateThree("label-valid")
-        setStyleStateBottomThree("bottom-border-valid")
-        return false
+        else if(data.endDate === 'present' || data.endDate === 'Present' ){
+            data.endDate = 'Present'
+            setStyleStateThree("label-valid")
+            setStyleStateBottomThree("bottom-border-valid")
+            return false
+        }
+        else if(monthChecker(data.endDate.toLowerCase()) && yearChecker(data.endDate)){
+            setStyleStateThree("label-valid")
+            setStyleStateBottomThree("bottom-border-valid")
+            return false
+        }
+        else{
+            setStyleStateThree("label-invalid")
+            setStyleStateBottomThree("bottom-border-invalid")
+            return true 
+        }
     }
+
     const degree = () => {
-        if (data.degree === '') {
+        if (!(/^[a-zA-Z]*$/.test(data.degree)) || data.degree === '') {
             setStyleStateFour("label-invalid")
             setStyleStateBottomFour("bottom-border-invalid")
             return true 
@@ -70,42 +94,12 @@ const EducationPage = (props) => {
         setStyleStateBottomFour("bottom-border-valid")
         return false
     }
-    // const gpa = () => {
-    //     if (!(/^[0-4]\.\d\d$/).test(data.gpa)) {
-    //         setStyleStateFive("label-invalid")
-    //         setStyleStateBottomFive("bottom-border-invalid")
-    //         return true 
-    //     }
-    //     setStyleStateFive("label-valid")
-    //     setStyleStateBottomFive("bottom-border-valid")
-    //     return false
-    // }
-    // const courseOne = () => {
-    //     if (data.relevantCourseOne === '') {
-    //         setStyleStateSix("label-invalid")
-    //         setStyleStateBottomSix("bottom-border-invalid")
-    //         return true 
-    //     }
-    //     setStyleStateSix("label-valid")
-    //     setStyleStateBottomSix("bottom-border-valid")
-    //     return false
-    // }
-    // const courseTwo = () => {
-    //     if (data.relevantCourseTwo === '') {
-    //         setStyleStateSeven("label-invalid")
-    //         setStyleStateBottomSeven("bottom-border-invalid")
-    //         return true 
-    //     }
-    //     setStyleStateSeven("label-valid")
-    //     setStyleStateBottomSeven("bottom-border-valid")
-    //     return false
-    // }
 
     function checkAll (){
         let setFormStatus; 
         const validationFuncs = [university(), startDate(), endDate(), degree()]
         for (let i = 0; i < validationFuncs.length; i++) {
-            console.log(validationFuncs[i])
+            // console.log(validationFuncs[i])
             // Return true = invalid 
             if(validationFuncs[i] === true){
                 // Form is not complete or invalid input(s)
@@ -136,7 +130,7 @@ const EducationPage = (props) => {
                         <input 
                             type="text"
                             name="university"
-                            placeholder="e.g. John"
+                            placeholder="e.g. University of California, Santa Cruz"
                             className="input-area" 
                             value={data.university}
                             onChange={handleChange}
@@ -162,7 +156,7 @@ const EducationPage = (props) => {
                                 <input 
                                     type="text"
                                     name="endDate"
-                                    placeholder="e.g. Present"
+                                    placeholder="e.g. March 2021"
                                     className="input-area" 
                                     value={data.endDate}
                                     onChange={handleChange}
@@ -210,19 +204,19 @@ const EducationPage = (props) => {
                         <input 
                             type="text"
                             name="relevantCourseOne"
-                            placeholder="e.g. "
+                            placeholder="e.g. Game Design"
                             className="input-area" 
                             value={data.relevantCourseOne}
                             onChange={handleChange}
                         />
-                        <div className =  'bottom-border-default'></div>
+                        <div className = 'bottom-border-default'></div>
                     </div>
                     <div className="column-item">
                         <span className = 'label-default'>Relevant Coursework (optional)</span>
                         <input 
                             type="text"
                             name="relevantCourseTwo"
-                            placeholder="e.g. Psych 10"
+                            placeholder="e.g. Child Psychology"
                             className="input-area" 
                             value={data.relevantCourseTwo}
                             onChange={handleChange}
@@ -232,17 +226,15 @@ const EducationPage = (props) => {
                 </div>
             </div>  
             <div className="main-heading-form-item">
-                <div className="column-container">
-                    <div className="column-item">
-                        <button className = "button-left" onClick={back}>Back</button> 
-                        {/* <button>Add course work</button> */}
+                <div className="button-container">
+                    <div className="button-item">
+                        <button className = "button-left-two" onClick={back}>Back</button> 
                     </div>
-                    <div className="column-item">
-                        {/* Blank */}
+                    <div className="button-item">
                         <div className = "right-button">
-                            <button className = "button-right"onClick={check} disabled={continueMe}>Next</button>
+                            <button className = "button-right"onClick={check} disabled={continueMe}>Next</button>                              
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>  
         </div>

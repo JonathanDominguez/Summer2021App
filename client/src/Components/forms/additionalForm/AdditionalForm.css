@@ -68,19 +68,8 @@ input {
     background: red;
 }
 /* Add Link */
-.add-icon{
-    text-align: center;
-    padding: 1px 2px;
-    font-size: 20px;
-}
 .showLinkOne{
     display: block;
-}
-.showButton{
-    border: none;
-    background-color: white;
-    text-align: center;
-    font-size: 1rem;
 }
 .disableInput{
     display: none;

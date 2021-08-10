@@ -18,11 +18,6 @@
 .column-item {
     padding: 20px;
 }
-/* Inputs */
-/* .input-container{
-    margin:auto;
-    width: 100%;
-} */
 input {
 	outline: none;
 	border: none;
@@ -39,9 +34,6 @@ input {
     padding-left: 0.15rem;
     color: red;
 }
-/* .input-container{
-    padding: 10px 15px;
-} */
 .input-area{
     width: 100%;
     border-bottom: 2px solid #d9d9d9;
@@ -68,46 +60,31 @@ input {
     background: red;
 }
 /* Add Link */
-.add-icon{
-    text-align: center;
-    padding: 1px 2px;
-    font-size: 20px;
+.disableButton{
+    display: none;
+}
+.showButton{
+    background-color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
 }
 .showLinkOne{
     display: block;
 }
-.showButton{
-    border: none;
-    background-color: white;
-    text-align: center;
-    font-size: 1rem;
-}
 .disableInput{
     display: none;
-}
-.disableButton{
-    display: none;
-}
-.text-add{
-    padding: 1px 20px;
-    margin-bottom: 1px;
 }
 /* button */
 .button-container {
     display: grid;
     grid-template-columns: 50% 50%;
-    /* background-color: #2196F3; */
     padding: 10px;
 }
-.button-item {
-    /* background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8); */
-    /* background-color: red; */
-}
-.right-button{
+.right-button-container{
     margin: auto;
     width: 5rem;
-    /* background-color: blue; */
     margin-right: 1px;
 }
 .button-type-next{

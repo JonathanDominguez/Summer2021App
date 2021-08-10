@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './AdditionalForm.css'
-import { IoIosAddCircleOutline } from 'react-icons/io';
 
 const Form = (props) => {
     // Props being brought in
@@ -14,14 +13,6 @@ const Form = (props) => {
     const [styleStateTwo, setStyleStateTwo] = useState("label-default");
     const [styleStateBottomTwo, setStyleStateBottomTwo] = useState("bottom-border-default");
     // Third Input: email
-    const [styleStateThree, setStyleStateThree] = useState("label-default");
-    const [styleStateBottomThree, setStyleStateBottomThree] = useState("bottom-border-default");
-    // Fourth Input: phone number
-    const [styleStateFour, setStyleStateFour] = useState("label-default");
-    const [styleStateBottomFour, setStyleStateBottomFour] = useState("bottom-border-default");
-    // Fourth Input: phone number
-    const [styleStateFive, setStyleStateFive] = useState("label-default");
-    const [styleStateBottomFive, setStyleStateBottomFive] = useState("bottom-border-default");
     // Validation
     // Return true: if is it invalid
     // Return false: if it is valid 
@@ -45,40 +36,10 @@ const Form = (props) => {
         setStyleStateBottomTwo("bottom-border-valid")
         return false
     }
-    const titleOneValidation = () => {
-        if (data.titleOne === '') {
-            setStyleStateThree("label-invalid")
-            setStyleStateBottomThree("bottom-border-invalid")
-            return true 
-        }
-        setStyleStateThree("label-valid")
-        setStyleStateBottomThree("bottom-border-valid")
-        return false
-    }
-    const startOneValidation = () => {
-        if (data.startOne === '') {
-            setStyleStateFour("label-invalid")
-            setStyleStateBottomFour("bottom-border-invalid")
-            return true 
-        }
-        setStyleStateFour("label-valid")
-        setStyleStateBottomFour("bottom-border-valid")
-        return false
-    }
-    const endOneValidation = () => {
-        if (data.endOne === '') {
-            setStyleStateFive("label-invalid")
-            setStyleStateBottomFive("bottom-border-invalid")
-            return true 
-        }
-        setStyleStateFive("label-valid")
-        setStyleStateBottomFive("bottom-border-valid")
-        return false
-    }
     // const [formStatus, setFormStatus] = useState()
     function checkAll (){
         let setFormStatus; 
-        const validationFuncs = [firstNameValidation(), lastNameValidation(), titleOneValidation(), startOneValidation(), endOneValidation()]
+        const validationFuncs = [firstNameValidation(), lastNameValidation()]
         for (let i = 0; i < validationFuncs.length; i++) {
             console.log(validationFuncs[i])
             // Return true = invalid 
