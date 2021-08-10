@@ -5,7 +5,7 @@ import NavBar from './Components/nav-bar/NavBar'
 import LandingPage from './Components/landing-page/LandingPage'
 import ProgressBar from './Components/progress-bar/ProgressBar'
 import OptionPage from './Components/optionPage/OptionPage';
-import CoverLetter from './Components/coverletterPage/hold';
+import CoverLetter from './Components/coverLetterPage/hold';
 import ContactUs from './Components/contactUsPage/holder';
 import AboutUs from './Components/aboutPage/about';
 
