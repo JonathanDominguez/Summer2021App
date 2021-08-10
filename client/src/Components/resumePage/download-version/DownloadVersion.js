@@ -1,6 +1,6 @@
 import React from 'react'
 import './DownloadVersion.css'
-import resumeImage from '../../images/sample.png'
+import resumeImage from '../../../images/sample.png'
 import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import download from 'downloadjs'
 

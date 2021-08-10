@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 // Components
 import NavBar from './Components/nav-bar/NavBar'
 import LandingPage from './Components/landing-page/LandingPage'
-import ProgressBar from './Components/progress-bar/ProgressBar'
+import ProgressBar from './Components/resumePage/progress-bar/ProgressBar'
 import OptionPage from './Components/optionPage/OptionPage';
 import CoverLetter from './Components/coverLetterPage/hold';
 import ContactUs from './Components/contactUsPage/holder';
