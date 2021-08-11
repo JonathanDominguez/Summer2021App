@@ -3,26 +3,24 @@ import './DownloadVersion.css'
 import resumeImage from '../../../images/sample.png'
 import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import download from 'downloadjs'
+import resume from '../../../Templates/Resumes/Resume_Template_One.pdf'
 
 const DownloadVersion = (props) => {
     const { data, back } = props;
 
-    async function downlodPdf() {
-        const url = 'https://pdf-lib.js.org/assets/with_update_sections.pdf';
-        const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
-        const pdfDoc = await PDFDocument.load(existingPdfBytes);
-        const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
-        const pages = pdfDoc.getPages();
-        const firstPage = pages[0];
-        const { height } = firstPage.getSize();
-        firstPage.drawText(data.firstName, {
-        x: 5,
-        y: height / 2 + 300,
-        size: 50,
-        font: helveticaFont,
-        color: rgb(0.95, 0.1, 0.1),
-        rotate: degrees(0),
-    })
+    async function downloadPdf() {
+        const pdfDoc = await PDFDocument.create()
+        const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman)
+        const page = pdfDoc.addPage()
+        const { height } = page.getSize()
+        const fontSize = 30
+        page.drawText(data.firstName, {
+            x: 50,
+            y: height - 4 * fontSize,
+            size: fontSize,
+            font: timesRomanFont,
+            color: rgb(0, 0.53, 0.71),
+        })
         const pdfBytes = await pdfDoc.save();
         download(pdfBytes, "Resume.pdf", "application/pdf");
     }
@@ -52,7 +50,7 @@ const DownloadVersion = (props) => {
                                     <img src={resumeImage} className = "image-fix" alt ="resume"/>
                                 </div>
                                 <div className="image-item">
-                                    <button className = "button-type" onClick={downlodPdf}>PDF</button>
+                                    <button className = "button-type" onClick={downloadPdf}>PDF</button>
                                 </div> 
                             </div>
                         </div>
