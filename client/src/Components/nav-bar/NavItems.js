@@ -1,6 +1,6 @@
 export const NavItems = [
     {
-        title: 'Contact',
+        title: 'Connect',
         url: '/Contact',
         cName: 'nav-links'
     },

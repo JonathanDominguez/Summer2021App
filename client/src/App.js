@@ -5,8 +5,8 @@ import NavBar from './Components/nav-bar/NavBar'
 import LandingPage from './Components/landing-page/LandingPage'
 import ProgressBar from './Components/resumePage/progress-bar/ProgressBar'
 import OptionPage from './Components/optionPage/OptionPage';
-import CoverLetter from './Components/coverLetterPage/hold';
-import ContactUs from './Components/connectPage.js/holder';
+import CoverLetter from './Components/connectPage/holder';
+import ContactUs from './Components/connectPage/holder';
 import AboutUs from './Components/aboutPage/about';
 
 function App() {
