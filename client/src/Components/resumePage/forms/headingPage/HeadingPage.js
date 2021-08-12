@@ -9,60 +9,60 @@ const Form = (props) => {
     const [continueMe, setContinue] = useState(false)
     // Validation design
         // First Input: fist name
-    const [styleState, setStyleState] = useState("label-default");
+    const [styleState, setStyleState] = useState("label-default-one");
     const [styleStateBottom, setStyleStateBottom] = useState("bottom-border-default");
         // Second Input: last name
-    const [styleStateTwo, setStyleStateTwo] = useState("label-default");
+    const [styleStateTwo, setStyleStateTwo] = useState("label-default-one");
     const [styleStateBottomTwo, setStyleStateBottomTwo] = useState("bottom-border-default");
         // Third Input: email
-    const [styleStateThree, setStyleStateThree] = useState("label-default");
+    const [styleStateThree, setStyleStateThree] = useState("label-default-one");
     const [styleStateBottomThree, setStyleStateBottomThree] = useState("bottom-border-default");
         // Fourth Input: phone number
-    const [styleStateFour, setStyleStateFour] = useState("label-default");
+    const [styleStateFour, setStyleStateFour] = useState("label-default-one");
     const [styleStateBottomFour, setStyleStateBottomFour] = useState("bottom-border-default");
     // Validation
     // Return true: if is it invalid
     // Return false: if it is valid 
     const firstNameValidation = () => {
         if (!(/^[a-zA-Z]*$/.test(data.firstName)) || data.firstName === '') {
-            setStyleState("label-invalid")
+            setStyleState("label-invalid-one")
             setStyleStateBottom("bottom-border-invalid")
             return true 
         }
         else if(data.firstName === ''){
 
         }
-        setStyleState("label-valid")
+        setStyleState("label-valid-one")
         setStyleStateBottom("bottom-border-valid")
         return false
     }
     const lastNameValidation = () => {
         if (!(/^[a-zA-Z]*$/.test(data.lastName)) || data.lastName === '') {
-            setStyleStateTwo("label-invalid")
+            setStyleStateTwo("label-invalid-one")
             setStyleStateBottomTwo("bottom-border-invalid")
             return true 
         }
-        setStyleStateTwo("label-valid")
+        setStyleStateTwo("label-valid-one")
         setStyleStateBottomTwo("bottom-border-valid")
         return false
     }
     const usersEmailValidation = () => {
         if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(data.usersEmail))) {
-            setStyleStateThree("label-invalid")
+            setStyleStateThree("label-invalid-one")
             setStyleStateBottomThree("bottom-border-invalid")
             return true 
         }
-        setStyleStateThree("label-valid")
+        setStyleStateThree("label-valid-one")
         setStyleStateBottomThree("bottom-border-valid")
         return false
     }
     const phoneNumberValidation = () => {
         if (!(/^\d{10}$/.test(data.phoneNumber))) {
-            setStyleStateFour("label-invalid")
+            setStyleStateFour("label-invalid-one")
             setStyleStateBottomFour("bottom-border-invalid")
             return true 
         }
-        setStyleStateFour("label-valid")
+        setStyleStateFour("label-valid-one")
         setStyleStateBottomFour("bottom-border-valid")
         return false
     }
@@ -106,20 +106,20 @@ const Form = (props) => {
     }
 
     return (
-        <div className="main-heading-form-container">
+        <div className="form-one">
             <form >
                 {/* Top row */}
-                <div className="main-heading-form-item">
-                    <div className="column-container">
+                <div className='main-container-one'>
+                    <div className="column-container-one">
                         {/* First Name */}
-                        <div className="column-item">
-                            <div className="input-container">
+                        <div className="column-item-one">
+                            <div className="input-container-one">
                                 <span className = {styleState}>First Name</span>
                                 <input 
                                     type="text"
                                     name="firstName"
                                     placeholder="e.g. John"
-                                    className="input-area" 
+                                    className="input-area-one" 
                                     value={data.firstName}
                                     onChange={handleChange}
                                 />
@@ -127,14 +127,14 @@ const Form = (props) => {
                             </div>
                         </div>
                         {/* Last Name */}
-                        <div className="column-item">
+                        <div className="column-item-one">
                             <div className="input-container">
                                 <span className = {styleStateTwo}>Last Name</span>
                                 <input 
                                     type="text"
                                     name="lastName"
                                     placeholder="e.g. Doe"
-                                    className="input-area" 
+                                    className="input-area-one" 
                                     value={data.lastName}
                                     onChange={handleChange}
                                 />
@@ -144,17 +144,17 @@ const Form = (props) => {
                     </div>
                 </div>
                 {/* Middle row */}
-                <div className="main-heading-form-item">
-                    <div className="column-container">
+                <div className="main-container-one">
+                    <div className="column-container-one">
                         {/* Email */}
-                        <div className="column-item">
+                        <div className="column-item-one">
                             <div className="input-container">
                                 <span className = {styleStateThree}>Email</span>
                                 <input 
                                     type="email"
                                     name="usersEmail"
                                     placeholder="MyEmail@gmail.com"
-                                    className="input-area" 
+                                    className="input-area-one" 
                                     value={data.usersEmail}
                                     onChange={handleChange}
                                 />
@@ -162,14 +162,14 @@ const Form = (props) => {
                             </div>
                         </div>
                         {/* Phone Number */}
-                        <div className="column-item">
+                        <div className="column-item-one">
                             <div className="input-container">
                                 <span className = {styleStateFour}>Phone Number</span>
                                 <input
                                     type="tel"
                                     name="phoneNumber"
                                     placeholder="e.g. 1234567890"
-                                    className="input-area" 
+                                    className="input-area-one" 
                                     value={data.phoneNumber}
                                     onChange={handleChange} 
                                 />
@@ -179,10 +179,10 @@ const Form = (props) => {
                     </div>
                 </div>  
                 {/* Add link row */}
-                <div className="main-heading-form-item">
-                    <div className="column-container">
+                <div className="main-container-one">
+                    <div className="column-container-one">
                         {/* First Link */}
-                        <div className="column-item">
+                        <div className="column-item-one">
                             <div className="input-container">
                                 <button 
                                     onClick={showLink} 
@@ -190,12 +190,12 @@ const Form = (props) => {
                                     <IoIosAddCircleOutline/> Add Link
                                 </button>
                                 <div className = {showOption ? 'showLinkOne': 'disableInput'}>
-                                    <span className = 'label-default'>Link (optional)</span>
+                                    <span className = 'label-default-one'>Link (optional)</span>
                                     <input
                                             type="tel"
                                             name="linkOne"
                                             placeholder="e.g. LinkedIn"
-                                            className = 'input-area'
+                                            className = 'input-area-one'
                                             value={data.linkOne}
                                             onChange={handleChange} 
                                         />
@@ -204,7 +204,7 @@ const Form = (props) => {
                             </div>
                         </div>
                         {/* Second link */}
-                        <div className="column-item">
+                        <div className="column-item-one">
                             <div className="input-container">
                                 <button 
                                     onClick={showLinkTwo} 
@@ -212,12 +212,12 @@ const Form = (props) => {
                                     <IoIosAddCircleOutline/> Add Link
                                 </button>
                                 <div className = {showOptionTwo ? 'showLinkOne': 'disableInput'}>
-                                    <span className = 'label-default'>Link (optional)</span>
+                                    <span className = 'label-default-one'>Link (optional)</span>
                                     <input
                                             type="tel"
                                             name="linkOneTwo"
                                             placeholder="e.g. GitHub"
-                                            className = 'input-area'
+                                            className = 'input-area-one'
                                             value={data.linkOneTwo}
                                             onChange={handleChange} 
                                         />
@@ -228,14 +228,14 @@ const Form = (props) => {
                     </div>
                 </div> 
                 {/* Button Row */}
-                <div className="main-heading-form-item">
+                <div className="main-container-one">
                     <div className="button-container">
                         <div className="button-item">
                         </div>
                         {/* Next button */}
                         <div className="button-item">
                             <div className = "right-button-container">
-                                <button  className = "button-type-next" onClick={check} disabled={continueMe}>Next</button>
+                                <button  className = "button-next-one" onClick={check} disabled={continueMe}>Next</button>
                             </div>
                         </div>
                     </div>

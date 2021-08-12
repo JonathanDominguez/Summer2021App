@@ -1,9 +1,10 @@
 import React from 'react'
 import './DownloadVersion.css'
 import resumeImage from '../../../images/sample.png'
-import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+// import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import download from 'downloadjs'
-import resume from '../../../Templates/Resumes/Resume_Template_One.pdf'
+// import resume from '../../../Templates/Resumes/Resume_Template_One.pdf'
 
 const DownloadVersion = (props) => {
     const { data, back } = props;

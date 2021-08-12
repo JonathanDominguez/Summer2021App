@@ -1,52 +1,59 @@
-.main-heading-form {
+/* Grid */
+.form-one{
     display: grid;
     grid-template-columns: auto;
-    margin-right: 2vw;
     padding-top: 10vh;
+    margin-right: 2vw;
     padding: 10px;
     margin-top: 8vh;
-    width: 100%;
 }
-.main-heading-form-item {
+.main-container-one{
     background-color: #fff;
     padding: 1vh;
 }
-.column-container {
+.column-container-one {
     display: grid;
     grid-template-columns: 50% 50%;
 }
-.column-item {
-    padding: 30px;
+.column-item-one {
+    padding: 20px;
 }
-.education-date-container {
+.date-container-one {
     display: grid;
     grid-template-columns: 47% 47%;
+    grid-row-gap: 5vh;
     grid-column-gap: 6%;
 }
-/* Inputs */
-.label-default{
-    padding-left: 0.15rem;
-}
-.label-valid{
-    padding-left: 0.15rem;
-    color: #39DE70;
-}
-.label-invalid{
-    padding-left: 0.15rem;
-    color: red;
-}
-/*  */
+.input-area-one-two{
+    width:100%;
+    border-bottom: 2px solid #d9d9d9;
+    border-style:none;
+    font-size: 1.3rem;
+    margin-right: 1px;
+}  
 input {
 	outline: none;
 	border: none;
-    background-color: #fff;
 }
-.input-area{
+/* Label options */
+.label-default-one{
+    padding-left: 0.15rem;
+}
+.label-valid-one{
+    padding-left: 0.15rem;
+    color: #39DE70;
+}
+.label-invalid-one{
+    padding-left: 0.15rem;
+    color: red;
+}
+.input-area-one{
     width: 100%;
     border-bottom: 2px solid #d9d9d9;
     border-style:none;
     font-size: 1.5rem;
 }  
+/* Bottom line options */
 .bottom-border-default{
     margin-top: 0px;
     width: 100%;
@@ -65,59 +72,77 @@ input {
     height: 0.1rem;
     background: red;
 }
-/* Buttons */
+/* Add Link */
+.disableButton{
+    display: none;
+}
+.showButton{
+    background-color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.showLinkOne{
+    display: block;
+}
+.disableInput{
+    display: none;
+}
+/* button */
 .button-container {
     display: grid;
     grid-template-columns: 50% 50%;
 }
-.button-left-two{
-    border: none;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    background: #4B99C0;
-    color: #ffffff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 0.5rem;
+.button-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
 }
-.button-right {
-    border: none;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    background: #4B99C0;
-    color: #ffffff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 0.5rem;
-}
-.right-button{
+.right-button-container{
     margin: auto;
     width: 5rem;
     margin-right: 1px;
 }
-/* Responsive */
+.button-back-one{
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background: #4B99C0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+.button-next-one{
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background: #4B99C0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-top: 0px;
+}
 @media screen and (max-width: 68rem) {
-    .main-heading-form {
-        /* display: grid;
+    .column-container-one {
+        display: grid;
         grid-template-columns: auto;
-        margin-right: vw;
-        padding-top: 10vh;
-        padding: 10px;
-        margin-top: 8vh;
-        width: 100%; */
     }
-    .main-heading-form-container {
+    .form-one{
         padding-top: 1vh;
     }
-    .column-container {
-        display: grid;
-        grid-template-columns: auto;
+    .button-next-one{
+        margin-top: 0vh;
     }
-    .education-date-container {
-        display: grid;
+    .main-container-one{
+        padding: 0vh;
+    }
+    .date-container-one  {
         grid-template-columns: auto;
-        grid-row-gap: 3.7vh;
+        grid-row-gap: 35px;
     }
 }

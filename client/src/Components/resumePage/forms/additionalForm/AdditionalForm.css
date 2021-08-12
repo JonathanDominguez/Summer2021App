@@ -109,7 +109,7 @@ input {
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
-    margin-top: 12vh;
+    /* margin-top: 12vh; */
 }
 .button-left {
     border: none;
@@ -121,7 +121,7 @@ input {
     cursor: pointer;
     text-align: center;
     border-radius: 0.5rem;
-    margin-top: 12vh;
+    /* margin-top: 12vh; */
 }
 /* Date grid */
 .date-container {

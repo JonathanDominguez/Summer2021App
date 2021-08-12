@@ -1,5 +1,5 @@
 /* Grid */
-.main-heading-form-container {
+.form-one{
     display: grid;
     grid-template-columns: auto;
     padding-top: 10vh;
@@ -7,15 +7,15 @@
     padding: 10px;
     margin-top: 8vh;
 }
-.main-heading-form-item {
+.main-container-one{
     background-color: #fff;
     padding: 1vh;
 }
-.column-container {
+.column-container-one {
     display: grid;
     grid-template-columns: 50% 50%;
 }
-.column-item {
+.column-item-one {
     padding: 20px;
 }
 input {
@@ -23,18 +23,18 @@ input {
 	border: none;
 }
 /* Label options */
-.label-default{
+.label-default-one{
     padding-left: 0.15rem;
 }
-.label-valid{
+.label-valid-one{
     padding-left: 0.15rem;
     color: #39DE70;
 }
-.label-invalid{
+.label-invalid-one{
     padding-left: 0.15rem;
     color: red;
 }
-.input-area{
+.input-area-one{
     width: 100%;
     border-bottom: 2px solid #d9d9d9;
     border-style:none;
@@ -87,7 +87,7 @@ input {
     width: 5rem;
     margin-right: 1px;
 }
-.button-type-next{
+.button-next-one{
     border: none;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -100,11 +100,17 @@ input {
     margin-top: 20vh;
 }
 @media screen and (max-width: 68rem) {
-    .column-container {
+    .column-container-one {
         display: grid;
         grid-template-columns: auto;
     }
-    .main-heading-form-container {
+    .form-one{
         padding-top: 1vh;
+    }
+    .button-next-one{
+        margin-top: 0vh;
+    }
+    .main-container-one{
+        padding: 0vh;
     }
 }
