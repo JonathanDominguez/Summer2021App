@@ -6,7 +6,7 @@ import { saveAs } from 'file-saver';
 import { Document,  Packer, Paragraph, TextRun } from 'docx';
 import * as fs from "fs";
 
-const Docxjs = (props) => {
+const WordDocument = (props) => {
     const { data } = props;
 
 
@@ -40,10 +40,10 @@ const print = () => {
 }
 
 return (
-    <div className="book">
+    <div>
         <button className="print-button" onClick={print}>Microsoft Word</button>
     </div>
     )
 }
 
-export default Docxjs;
+export default WordDocument;

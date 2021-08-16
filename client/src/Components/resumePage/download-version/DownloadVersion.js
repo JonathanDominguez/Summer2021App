@@ -1,38 +1,15 @@
-import React from 'react'
-import './DownloadVersion.css'
-import resumeImage from '../../../images/sample.png'
-import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
-import download from 'downloadjs'
-
+import React from 'react';
+import './DownloadVersion.css';
+import resumeImage from '../../../images/sample.png';
+import PDFDownload from './pdfDownload/pdfDownload'
 import WordDownload from './docxDownload/docx'
 
 const DownloadVersion = (props) => {
     const { data, back } = props;
-
-    async function downloadPdf() {
-        const pdfDoc = await PDFDocument.create()
-        const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman)
-        const page = pdfDoc.addPage()
-        const { height } = page.getSize()
-        const fontSize = 30
-        page.drawText(data.firstName, {
-            x: 50,
-            y: height - 4 * fontSize,
-            size: fontSize,
-            font: timesRomanFont,
-            color: rgb(0, 0.53, 0.71),
-        })
-        const pdfBytes = await pdfDoc.save();
-        download(pdfBytes, "Resume.pdf", "application/pdf");
-    }
-
-    
     // Converts phoneNum to (###) ###- ####
     // const numberConverter = (phoneNum) => {
     //     return '(' + phoneNum.substring(0, 3) + ') ' + phoneNum.substring(3, 6) + ' - ' + phoneNum.substring(6, 10);
-    
     // }
-
     return (
         <div>
             <div className="main-container">
@@ -49,7 +26,11 @@ const DownloadVersion = (props) => {
                                     <img src={resumeImage} className = "image-fix" alt ="resume"/>
                                 </div>
                                 <div className="image-item">
-                                    <button className = "button-type" onClick={downloadPdf}>PDF</button>
+                                    <button className = "button-type"> 
+                                        <PDFDownload
+                                            data={data}
+                                        />
+                                    </button>
                                 </div> 
                             </div>
                         </div>
@@ -63,7 +44,6 @@ const DownloadVersion = (props) => {
                                     <button className = "button-type"> 
                                         <WordDownload
                                             data={data}
-
                                         />
                                     </button>
                                 </div> 
