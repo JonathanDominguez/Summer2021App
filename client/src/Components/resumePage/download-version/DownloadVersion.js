@@ -4,6 +4,8 @@ import resumeImage from '../../../images/sample.png'
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import download from 'downloadjs'
 
+import WordDownload from './docxDownload/docx'
+
 const DownloadVersion = (props) => {
     const { data, back } = props;
 
@@ -24,16 +26,12 @@ const DownloadVersion = (props) => {
         download(pdfBytes, "Resume.pdf", "application/pdf");
     }
 
-    function downloadDoc (){
-        console.log('IN progress')
-    }
+    
     // Converts phoneNum to (###) ###- ####
     // const numberConverter = (phoneNum) => {
     //     return '(' + phoneNum.substring(0, 3) + ') ' + phoneNum.substring(3, 6) + ' - ' + phoneNum.substring(6, 10);
     
     // }
-
-    
 
     return (
         <div>
@@ -61,7 +59,13 @@ const DownloadVersion = (props) => {
                                     <img src={resumeImage} className = "image-fix" alt ="resume"/>
                                 </div>
                                 <div className="image-item">
-                                    <button className = "button-type" onClick={downloadDoc}>Microsoft Word</button>
+                                    {/* <WordDownload className = "button-type" onClick={downloadDoc}>Microsoft Word</WordDownload> */}
+                                    <button className = "button-type"> 
+                                        <WordDownload
+                                            data={data}
+
+                                        />
+                                    </button>
                                 </div> 
                             </div>                                       
                         </div> 
