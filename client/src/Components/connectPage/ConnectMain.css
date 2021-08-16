@@ -1,0 +1,28 @@
+.main-contact-container {
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    background-color: #2196F3;
+    /* padding: 10px; */
+    height: 91.9vh;
+}
+.main-contact-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.message-container-no{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 20vw;
+    height: 5vh;
+    background-color: teal;
+}
+.non-hidden{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 20vw;
+    height: 50vh;
+    background-color: teal;
+}
+/* message-heading */

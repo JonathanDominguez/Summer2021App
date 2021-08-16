@@ -2,9 +2,7 @@ import React from 'react'
 import './DownloadVersion.css'
 import resumeImage from '../../../images/sample.png'
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
-// import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import download from 'downloadjs'
-// import resume from '../../../Templates/Resumes/Resume_Template_One.pdf'
 
 const DownloadVersion = (props) => {
     const { data, back } = props;
@@ -26,7 +24,7 @@ const DownloadVersion = (props) => {
         download(pdfBytes, "Resume.pdf", "application/pdf");
     }
 
-    function downlodDoc (){
+    function downloadDoc (){
         console.log('IN progress')
     }
     // Converts phoneNum to (###) ###- ####
@@ -61,7 +59,7 @@ const DownloadVersion = (props) => {
                                     <img src={resumeImage} className = "image-fix" alt ="resume"/>
                                 </div>
                                 <div className="image-item">
-                                    <button className = "button-type" onClick={downlodDoc}>Microsoft Word</button>
+                                    <button className = "button-type" onClick={downloadDoc}>Microsoft Word</button>
                                 </div> 
                             </div>                                       
                         </div> 

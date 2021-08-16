@@ -92,12 +92,16 @@ const ProgressBar = () => {
                 );
             case 1:
                 return (
-                    <EducationForm
-                        data={formData}
-                        handleChange={handleChange}
-                        next={next}
-                        back={back}
-                    />
+                    <DownLoads
+                    data={formData}
+                    back={back}
+                />
+                    // <EducationForm
+                    //     data={formData}
+                    //     handleChange={handleChange}
+                    //     next={next}
+                    //     back={back}
+                    // />
                 );
             case 2:
                 return (
