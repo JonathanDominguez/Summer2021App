@@ -8,6 +8,7 @@ import OptionPage from './Components/optionPage/OptionPage';
 import CoverLetter from './Components/coverletterPage/hold';
 import ContactUs from './Components/connectPage/ConnectMain';
 import AboutUs from './Components/aboutPage/about';
+import ResumeTemplates from './Components/resumePage/resumeTemplates/templates'
 
 function App() {
     return (
@@ -32,6 +33,9 @@ function App() {
                     </Route>
                     <Route exact path = '/About'>
                       <AboutUs />
+                    </Route>
+                    <Route exact path = '/ResumeTemplates'>
+                      <ResumeTemplates />
                     </Route>
                 </Switch>
             </Router>

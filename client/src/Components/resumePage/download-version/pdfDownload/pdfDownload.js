@@ -2,7 +2,6 @@ import React from 'react'
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import download from 'downloadjs'
 
-// export default function pdfDownload(props) {
 const pdfDownload = (props) => {
     const { data } = props;
 
@@ -22,8 +21,7 @@ const pdfDownload = (props) => {
         const pdfBytes = await pdfDoc.save();
         download(pdfBytes, "Resume.pdf", "application/pdf");
     }
-
-
+    
     return (
         <div>
             <button className="print-button" onClick={downloadPdf}>PDF</button>

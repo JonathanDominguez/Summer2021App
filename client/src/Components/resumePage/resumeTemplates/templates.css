@@ -1,0 +1,35 @@
+.temp-container{
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    top: 20vh;
+    height: 80vh;
+    left: 0;
+    /* background-color: red; */
+}
+.selection-container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+    /* background-color: #2196F3; */
+    margin-left: 10vh;
+    margin-right: 10vh;
+    padding-bottom: 1vh;
+    margin-top: 1vh;
+}
+.selection-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    font-size: 30px;
+    text-align: center;
+    height: 60vh;
+
+}
+.image-details{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+

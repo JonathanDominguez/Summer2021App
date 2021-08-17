@@ -23,7 +23,7 @@ export default function OptionPage() {
                                         <img src={resumeImage} className = "image-edit" alt ="resume"/>
                                     </div>
                                     <div className="image-item">
-                                        <Link to = "/PDF" className = "button-type">Resume</Link>
+                                        <Link to = "/ResumeTemplates" className = "button-type">Resume</Link>
                                     </div> 
                                 </div>
                             </div>
