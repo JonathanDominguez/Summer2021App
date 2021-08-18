@@ -1,37 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Feed.css'
+// Fake resume image
+import ImageResume from '../../../images/resumeTemp/tempOne.png'
 
 const Feed = () => {
-
+    // FAKE DATA FOR NOW
     const data = [
-        { id: 1, name: "John Doe" },
-        { id: 2, name: "Victor Wayne" },
-        { id: 3, name: "Jane Doe" },
-        { id: 4, name: "Jane Doe" },
-        { id: 5, name: "Jane Doe" },
-        { id: 6, name: "Jane Doe" },
-        { id: 7, name: "Jane Doe" },
-        { id: 8, name: "Jane Doe" },
-        { id: 9, name: "Jane Doe" },
-        { id: 10, name: "Jane Doe" },
-        { id: 11, name: "Jane Doe" },
-        { id: 12, name: "Jane Doe" },
-        { id: 13, name: "Jane Doe" },
-
+        { name: "John Doe", job: "web developer", tags: ["React", "JavaScript"] },
+        { name: "Victor Wayne", job: "web developer" },
+        { name: "Victor Wayne", job: "web developer" },
+        { name: "Victor Wayne", job: "web developer" },
+        { name: "Victor Wayne", job: "web developer" },
+        { name: "Victor Wayne", job: "web developer" },
+        { name: "Victor Wayne", job: "web developer" },
+        { name: "Victor Wayne", job: "web developer" },
     ];
-    
+
     return (
-        <div>
-            <p>FEED</p>
-            <div className="main-feed-block">
-                {data.map((user) => (
-                    <div className="user">
-                        <p>{user.name}</p>
+        <div className="main-feed-block">
+            {data.map((user) => (
+                <div className="user-block">
+                    {/* Header */}
+                    <div className = "feed-header">
+                        {/* Circle image */}
+                        <div className="profiler-header">
+                            {/* <img className="facebook" alt=""></img> */}
+                        </div>
+                        <div className = "info-header">
+                            <p>{user.name}</p>
+                            <p>{user.job}</p>
+                        </div>
                     </div>
-                ))}
-            </div>
+                    <hr/>
+                    {/* Resume Image */}
+                    <div className = "resume-header">
+                        <div className = "image-contain">
+                            <img src = {ImageResume} alt="" className = "resume-img-container"/>
+                        </div>
+                    </div>
+                    {/* Tags */}
+                    <hr/>
+                    <div className = "tags-headers">
+                        <p>{user.tags + " "}</p>
+                    </div>
+                </div>
+            ))}
         </div>
     )
 }
 
-export default Feed
+export default Feed;

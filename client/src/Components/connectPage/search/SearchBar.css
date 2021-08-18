@@ -1,0 +1,25 @@
+.search-container{
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 50%;
+    height: 4vh;
+    background-color: #89CFF0;
+}
+.search-bar{
+    padding-top: 1vh;
+    padding-left: 1vw;
+}
+.search-input{
+    width: 80%;
+    margin-right: 0vw;
+}
+.search-icon-container{
+    width: 5%;
+    border: none;
+    /* background-color: transparent; */
+}
+.search-icon{
+    font-size: 1rem;
+    color: #fff;
+}

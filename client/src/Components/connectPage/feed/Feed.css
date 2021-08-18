@@ -1,11 +1,89 @@
 .main-feed-block{
     margin: auto;
-    width: 80%;
+    width: 50%;
     overflow-y: scroll;
-    height: 85vh;
+    height: 82vh;
 }
-.user{
+.user-block{
+    height: 75vh;
+    margin-bottom: 10vh;
+    background-color: white;
+    border-radius: 15px;
+}
+.feed-header{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-top: 1vh;
+    height: 7vh;
+    background-color: #fff;
+}
+.profiler-header{
+    width: 2.8vw;
+    height: 5vh;
+    background-color: grey;
+    border-radius: 50%;
+    margin-left: 1vw;
+    float: left; 
+}
+.info-header{
+    margin-left: 5vw;
+    margin-top: 5px;
+    height: 100px; 
+}
+.resume-header{
+    height: 60vh;
+    /* background-color: blue; */
+}
+.image-contain{
+    margin: auto;
+    /* padding-top: 2vh; */
+    width: 80%;
+}
+.resume-img-container{
+    height: 100%;
+    width: 100%;
+}
+.tags-headers{
+    height: 13vh;
+}
+/* .user-block{
+    background-color: yellowgreen;
+    height: 80vh;
+    margin-bottom: 10vh;
+    border-radius: 15px;
+    margin-top: 10vh;
+}
+.feed-header{
+    height: 6vh;
+    background-color: green;
+}
+.resume-header{
+    height: 60vh;
+    background-color: blue;
+}
+.image-contain{
+    margin: auto;
+    padding-top: 2vh;
+    width: 80%;
+}
+.resume-img-container{
+    height: 100%;
+    width: 100%;
+}
+.tags-headers{
+    height: 13vh;
+}
+.profiler-header{
+    width: 3vw;
+    height: 5vh;
     background-color: red;
-    height: 10vh;
-    margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    float: left; 
 }
+.info-header{
+    margin-left: 4vw;
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 100px; 
+} */
