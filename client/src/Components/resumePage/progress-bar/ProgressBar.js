@@ -93,16 +93,12 @@ const ProgressBar = () => {
             case 1:
                 // comment out then undo
                 return (
-                    <DownLoads
-                    data={formData}
-                    back={back}
-                />
-                    // <EducationForm
-                    //     data={formData}
-                    //     handleChange={handleChange}
-                    //     next={next}
-                    //     back={back}
-                    // />
+                    <EducationForm
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
+                    />
                 );
             case 2:
                 return (

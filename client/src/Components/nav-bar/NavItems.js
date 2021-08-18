@@ -11,7 +11,7 @@ export const NavItems = [
     },
     {
         title: 'Resume',
-        url: '/PDF',
+        url: '/ResumeTemplates',
         cName: 'nav-links'
     },
     {

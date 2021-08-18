@@ -32,7 +32,6 @@
     margin-top: 5vh;
 }
 .selection-item {
-    text-align: center;
     height: 100%;
     transition: transform 250ms;
 }
@@ -98,3 +97,30 @@
     border: none;
     background: transparent;
 }
+/* @media screen and (max-width: 110rem) {
+    .temp-container{
+        background-color: tomato;
+        height: 200vh;
+    }
+    .expand-image{
+        margin-left: -2.8vw;
+    }
+}
+@media screen and (max-width: 105rem) {
+    .temp-container{
+        background-color: green;
+        height: 200vh;
+    }
+    .expand-image{
+        margin-left: -3vw;
+    }
+}
+@media screen and (max-width: 100rem) {
+    .temp-container{
+        background-color: blue;
+        height: 200vh;
+    }
+    .expand-image{
+        margin-left: -3.1vw;
+    }
+} */
