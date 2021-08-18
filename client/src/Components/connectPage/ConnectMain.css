@@ -17,12 +17,3 @@
     height: 5vh;
     background-color: teal;
 }
-.non-hidden{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 20vw;
-    height: 50vh;
-    background-color: teal;
-}
-/* message-heading */

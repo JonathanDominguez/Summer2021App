@@ -1,0 +1,11 @@
+.main-feed-block{
+    margin: auto;
+    width: 80%;
+    overflow-y: scroll;
+    height: 85vh;
+}
+.user{
+    background-color: red;
+    height: 10vh;
+    margin-bottom: 1vh;
+}

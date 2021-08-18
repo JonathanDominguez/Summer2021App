@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import './ConnectMain.css';
 
-export default function ConnectMain() {
-    const [clickedMessage, setClickedMessage] = useState(true)
+import Feed from './feed/Feed'
+import Message from './message/Message'
 
-    const changeStatus = () =>{
-        setClickedMessage(!clickedMessage)
-        console.log(clickedMessage)
-    }
+export default function ConnectMain() {
 
     return (
         <div>
@@ -18,20 +15,11 @@ export default function ConnectMain() {
                 </div>
                 {/* Main area */}
                 <div className="main-contact-item">
-                    <p>main</p>
+                    <Feed/>
                 </div>
                 {/* Message */}
                 <div className="main-contact-item">
-                    <button onClick = {changeStatus} className = "message-button">
-                        <div className = {clickedMessage ? "message-container-no" : ""}>
-                            <div className = "message-heading">
-
-                            </div>
-                            <div className = "messages-body">
-
-                            </div>
-                        </div>
-                    </button>
+                    <Message/>
                 </div>
             </div>
         </div>
