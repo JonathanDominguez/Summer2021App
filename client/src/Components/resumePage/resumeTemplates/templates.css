@@ -1,35 +1,100 @@
+/* First container: resume selector */
+.center-container {
+    display: grid;
+    grid-template-columns: auto;
+}
+/*  */
 .temp-container{
     margin: auto;
     width: 100%;
     position: absolute;
-    top: 20vh;
+    top: 15vh;
     height: 80vh;
     left: 0;
-    /* background-color: red; */
 }
+.center-item {
+    font-size: 3rem;
+    text-align: center;
+}
+/* Text heading */
+.resume-text{
+    color: #fff;
+}
+/* Images selection */
 .selection-container {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-column-gap: 5%;
-    /* background-color: #2196F3; */
-    margin-left: 10vh;
-    margin-right: 10vh;
+    grid-template-columns: 25% 25% 25%;
+    grid-column-gap: 12.5%;
+    /* grid-row-gap: 100vh; */
+    margin-left: 20vh;
+    margin-right: 20vh;
     padding-bottom: 1vh;
-    margin-top: 1vh;
+    margin-top: 5vh;
 }
 .selection-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* border: 1px solid rgba(0, 0, 0, 0.8); */
-    font-size: 30px;
     text-align: center;
-    height: 60vh;
-
+    height: 100%;
+    transition: transform 250ms;
+}
+.selection-item:hover{
+    transform: translateY(-30px);
 }
 .image-details{
     width: 100%;
-    height: 100%;
+    height: 100;
     object-fit: contain;
+    padding-top: 100px;
 }
-
-
-
+.expand-image{
+    position: absolute;
+    margin-left: -2.6vw;
+    border: none;
+    background: transparent;
+    margin-top: 100px;
+}
+.triangle-top-right {
+    width: 0;
+    height: 0;
+    border-top: 4vh solid #4B99C0;
+    border-left: 4vh solid transparent;
+    cursor:pointer;
+}
+.expand-icon{
+    position: absolute;
+    margin-left: -1vw;
+    margin-top: -3.6vh;
+    color: #fff;
+    border: none;
+    background: transparent;
+}
+/* Second section: resume image expanded */
+.display-none{
+    display: none;
+}
+.display{
+    display: block;
+}
+.button-exit{
+    right:0;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    top: 0vh;
+    height: 100vh;
+    left: 0;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    color:#fff;
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+.exit-icon{
+    right:0;
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    z-index: 2;
+    border: none;
+    background: transparent;
+}

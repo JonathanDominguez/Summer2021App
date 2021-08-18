@@ -1,0 +1,33 @@
+/* image expand */
+.image-expand{
+    background-color: #000;
+    opacity: 0.8;
+    /* height: 100vh; */
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    top: 0vh;
+    height: 100vh;
+    left: 0;
+    z-index: 2;
+}
+.image-background{
+    /* background-color: black; */
+    opacity: 1;
+    z-index: 4;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    top: 0vh;
+    height: 100vh;
+    left: 0;
+    z-index: 2;
+}
+.image-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    width: 35vw;
+    height: 90vh;
+}
