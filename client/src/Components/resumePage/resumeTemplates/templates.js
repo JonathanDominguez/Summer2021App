@@ -63,7 +63,7 @@ const Templates = () => {
                                         className = "image-details">
                                     </img>
                                 </Link>
-                                <button className = "expand-image" onClick = { () => expandImageClick(3)}>
+                                <button className = "expand-image" onClick = { () => expandImageClick(1)}>
                                     <div className = "triangle-top-right">
                                         <IoExpandSharp className = "expand-icon"/>
                                     </div>
@@ -77,7 +77,7 @@ const Templates = () => {
                                         className = "image-details">
                                     </img>
                                 </Link>
-                                <button className = "expand-image" onClick = { () => expandImageClick(3)}>
+                                <button className = "expand-image" onClick = { () => expandImageClick(2)}>
                                     <div className = "triangle-top-right">
                                         <IoExpandSharp className = "expand-icon"/>
                                     </div>
