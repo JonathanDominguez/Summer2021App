@@ -1,24 +1,13 @@
 .main-contact-container {
     display: grid;
     grid-template-columns: 20vw 60vw 20vw;
-    /* background-color: #2196F3; */
-    /* padding: 10px; */
     height: 91.9vh;
-    /* background-color: #DCDCDC; */
-    /* background-color: red; */
-
-
-
     margin: auto;
     width: 100%;
-    /* display: flex; */
     position: absolute;
     top: 10vh;
     height: 80vh;
     left: 0;
-    /* flex-direction: row;
-    justify-content:space-around;
-    align-items:center; */
 }
 .main-contact-item {
     background-color: rgba(255, 255, 255, 0.8);
