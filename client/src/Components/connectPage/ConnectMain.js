@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ConnectMain.css';
 import Background from '../landing-page/background/Background'
 

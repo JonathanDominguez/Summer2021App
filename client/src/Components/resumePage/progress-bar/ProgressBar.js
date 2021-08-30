@@ -19,7 +19,7 @@ const ProgressBar = () => {
         phoneNumber: '',
         linkOne: '',
         linkTwo: '',
-        // Education Form
+        // Education Form 
         university: '',
         startDate: '',
         endDate:'',
@@ -91,7 +91,6 @@ const ProgressBar = () => {
                     />
                 );
             case 1:
-                // comment out then undo
                 return (
                     <EducationForm
                         data={formData}
@@ -108,7 +107,7 @@ const ProgressBar = () => {
                         next={next}
                         back={back}
                     />
-            );
+                );
             case 3:
                 return (
                     <ExperienceTwo
@@ -117,7 +116,7 @@ const ProgressBar = () => {
                         next={next}
                         back={back}
                     />
-            );
+                );
             case 4:
                 return (
                     <ExperienceThree
@@ -126,7 +125,7 @@ const ProgressBar = () => {
                         next={next}
                         back={back}
                     />
-            );
+                );
             case 5:
                 return (
                     <AdditionalForm
@@ -135,18 +134,18 @@ const ProgressBar = () => {
                         next={next}
                         back={back}
                     />
-            );
+                );
             case 6:
                 return (
                     <DownLoads
                         data={formData}
                         back={back}
                     />
-            );
+                );
             default:
                 return (
                     <p>Error</p>
-            );    
+                );    
         }
     }
 

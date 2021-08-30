@@ -4,7 +4,7 @@ import './docx.css'
 // Dependencies
 import { saveAs } from 'file-saver';
 import { Document,  Packer, Paragraph, TextRun } from 'docx';
-import * as fs from "fs";
+// import * as fs from "fs";
 
 const WordDocument = (props) => {
     const { data } = props;

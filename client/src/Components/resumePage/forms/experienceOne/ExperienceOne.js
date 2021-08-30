@@ -70,7 +70,6 @@ const Form = (props) => {
         let months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
         for (let i = 0; i < months.length; i++) {
             if(months[i] === correctMonth){
-                console.log("similar " +months[i])
                 return true
             }
         }
@@ -80,10 +79,8 @@ const Form = (props) => {
     const yearChecker = (year)=>{
         let yearHolder = year.substring(year.indexOf(' ')+1, year.length);
         if(/^\d{4}$/.test(yearHolder)){
-            console.log('its a year')
             return true
         }
-        console.log('not a year')
         return false
     }
     const endDate = () => {
@@ -114,7 +111,6 @@ const Form = (props) => {
         let setFormStatus; 
         const validationFuncs = [comName(), comLocation(), positionName(), startDate(), endDate()]
         for (let i = 0; i < validationFuncs.length; i++) {
-            console.log(validationFuncs[i])
             // Return true = invalid 
             if(validationFuncs[i] === true){
                 // Form is not complete or invalid input(s)
@@ -123,7 +119,6 @@ const Form = (props) => {
         }
         return setFormStatus
     }
-
     function check (event){
         if(checkAll()===false){
             setContinue(false)
@@ -202,7 +197,7 @@ const Form = (props) => {
                                             <input 
                                                 type="month"
                                                 name="startOne"
-                                                placeholder="e.g. John"
+                                                // placeholder="e.g. John"
                                                 className="input-area-one-two" 
                                                 value={data.startOne}
                                                 onChange={handleChange}

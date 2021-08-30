@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Feed.css'
 // Fake resume image
 import ImageResume from '../../../images/resumeTemp/tempOne.png'

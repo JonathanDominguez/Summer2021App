@@ -84,7 +84,6 @@ const Form = (props) => {
         let setFormStatus; 
         const validationFuncs = [firstNameValidation(), lastNameValidation(), usersEmailValidation(), phoneNumberValidation()]
         for (let i = 0; i < validationFuncs.length; i++) {
-            console.log(validationFuncs[i])
             // Return true = invalid 
             if(validationFuncs[i] === true){
                 // Form is not complete or invalid input(s)

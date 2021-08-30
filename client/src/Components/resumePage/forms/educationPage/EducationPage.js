@@ -20,7 +20,7 @@ const EducationPage = (props) => {
     const [styleStateBottomFour, setStyleStateBottomFour] = useState("bottom-border-default");
     // Functions for validation as well as setting the css validation
     const university = () => {
-        if (!(/^[a-zA-Z]*$/.test(data.university)) || data.university === '') {
+        if (data.university === '') {
             setStyleState("label")
             setStyleStateBottom("bottom-border-invalid")
             return true 
@@ -39,26 +39,24 @@ const EducationPage = (props) => {
         setStyleStateBottomTwo("bottom-border-valid")
         return false
     }
-
+    // Month checker
     const monthChecker = (userInput) => {
         let correctMonth = userInput.substr(0,userInput.indexOf(' '));
         let months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
         for (let i = 0; i < months.length; i++) {
             if(months[i] === correctMonth){
-                console.log("similar " +months[i])
                 return true
             }
         }
         return false
     }
-    
+    // Year checker
     const yearChecker = (year)=>{
         let yearHolder = year.substring(year.indexOf(' ')+1, year.length);
         if(/^\d{4}$/.test(yearHolder)){
             console.log('its a year')
             return true
         }
-        console.log('not a year')
         return false
     }
     const endDate = () => {
@@ -86,7 +84,7 @@ const EducationPage = (props) => {
     }
 
     const degree = () => {
-        if (!(/^[a-zA-Z]*$/.test(data.degree)) || data.degree === '') {
+        if (data.degree === '') {
             setStyleStateFour("label-invalid")
             setStyleStateBottomFour("bottom-border-invalid")
             return true 
@@ -150,7 +148,7 @@ const EducationPage = (props) => {
                                         <input 
                                             type="month"
                                             name="startDate"
-                                            placeholder="e.g. John"
+                                            placeholder="e.g. September 2017"
                                             className="input-area-one-two" 
                                             value={data.startDate}
                                             onChange={handleChange}
@@ -218,10 +216,10 @@ const EducationPage = (props) => {
                                 <span className = 'label-default'>Relevant Coursework (optional)</span>
                                 <input 
                                     type="text"
-                                    name="relevantCourseTwo"
+                                    name="relevantCourseOne"
                                     placeholder="e.g. Child Psychology"
                                     className="input-area-one" 
-                                    value={data.relevantCourseTwo}
+                                    value={data.relevantCourseOne}
                                     onChange={handleChange}
                                 />
                                 <div className =  'bottom-border-default'></div>
