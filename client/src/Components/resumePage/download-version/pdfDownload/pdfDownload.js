@@ -110,47 +110,76 @@ const PfDownload = (props) => {
                 font: timesRomanFont,
                 color: rgb(0, 0, 0),
             })
-            // Experience at most  82 characters per line
-            let spaceBetween = 30;
-            let sentences = [];
-            sentences = data.experienceOneOne.match(/\S.{0,96}(?=\s+|$)/g);
-            if(sentences.length === 1){
-                page.drawText("•    " + sentences[0], {
-                    x: 50,
-                    y: spaceCounter - (tracker + spaceBetween),
-                    size: fontSize,
-                    font: timesRomanFont,
-                    color: rgb(0, 0, 0),
-                })
-                spaceBetween += 15;
-            }
-            else{
-                for(let pos = 0; pos <= sentences.length; pos++){
-                    if(pos === 0){
-                        page.drawText("•    " + sentences[pos], {
-                            x: 50,
-                            y: spaceCounter - (tracker + spaceBetween),
-                            size: fontSize,
-                            font: timesRomanFont,
-                            color: rgb(0, 0, 0),
-                        })
-                    }
-                    else{
-                        let currentLine = "" + sentences[pos];
-                        page.drawText(currentLine, {
-                        // page.drawText(sentences[pos], {
-                            x: 50,
-                            y: spaceCounter - (tracker + spaceBetween),
-                            size: fontSize,
-                            font: timesRomanFont,
-                            color: rgb(0, 0, 0),
-                        })
-                    }
-                spaceBetween += 15;
+            // Experience date array
+            let experienceArray = [];
+                if(i === 0){
+                    experienceArray.push(data.experienceOneOne, data.experienceOneTwo, data.experienceOneThree, data.experienceOneFour) 
                 }
+                else if (i === 1){
+                    experienceArray =[];
+                    experienceArray.push(data.experienceTwoOne, data.experienceTwoTwo, data.experienceTwoThree, data.experienceTwoFour) 
+                }
+                else{
+                    experienceArray =[];
+                    experienceArray.push(data.experienceThreeOne, data.experienceThreeTwo, data.experienceThreeThree, data.experienceThreeFour) 
+                }
+            // For loop
+            let spaceBetween = 30;
+            for (let index = 0; index < experienceArray.length; index++) {
+                let experienceState;
+                if(index === 0){
+                    experienceState = experienceArray[0]
+                }
+                else if (index === 1){
+                    experienceState = experienceArray[1]
+                }
+                else if (index === 2){
+                    experienceState = experienceArray[2]
+                }
+                else{
+                    experienceState = experienceArray[3]
+                }
+                // let spaceBetween = 30;
+                let sentences = [];
+                // sentences = data.experienceOneOne.match(/\S.{0,96}(?=\s+|$)/g);
+                sentences = experienceState.match(/\S.{0,97}(?=\s+|$)/g);
+                let currentLineText = "" + sentences[0];
+                if(sentences.length === 1){
+                    page.drawText("•    " + currentLineText, {
+                        x: 50,
+                        y: spaceCounter - (tracker + spaceBetween),
+                        size: fontSize,
+                        font: timesRomanFont,
+                        color: rgb(0, 0, 0),
+                    })
+                    spaceBetween += 15;
+                }
+                else{
+                    for(let pos = 0; pos <= sentences.length-1; pos++){
+                        if(pos === 0){
+                            page.drawText("•    " + sentences[pos], {
+                                x: 50,
+                                y: spaceCounter - (tracker + spaceBetween),
+                                size: fontSize,
+                                font: timesRomanFont,
+                                color: rgb(0, 0, 0),
+                            })
+                        }
+                        else if (pos !== 0){
+                            let currentLine = "" + sentences[pos];
+                            page.drawText(currentLine, {
+                            // page.drawText(sentences[pos], {
+                                x: 50,
+                                y: spaceCounter - (tracker + spaceBetween),
+                                size: fontSize,
+                                font: timesRomanFont,
+                                color: rgb(0, 0, 0),
+                            })
+                        }
+                    spaceBetween += 15;
+                    }
+                }       
             }
-            // Gives spaces between experiences  
-            // tracker += 140;
             tracker += spaceBetween;
         }
         spaceCounter -= tracker;
@@ -195,7 +224,6 @@ const PfDownload = (props) => {
         //     font: timesRomanFont,
         //     color: rgb(0, 0, 0),
         // })
-
         // Download
         const pdfBytes = await pdfDoc.save();
         download(pdfBytes, "Resume.pdf", "application/pdf");
