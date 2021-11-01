@@ -1,0 +1,13 @@
+.flex-box-main {
+    display: flex;
+    justify-content: center;
+    padding: 10rem 10rem;
+}
+.left-box{
+    background-color: green;
+    padding: 10rem 10rem;
+}
+.right-box{
+    background-color: #4B99C0;
+    padding: 10rem 10rem;
+}

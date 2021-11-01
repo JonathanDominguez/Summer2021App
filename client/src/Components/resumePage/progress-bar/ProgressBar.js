@@ -17,6 +17,7 @@ const ProgressBar = () => {
         lastName: '',
         usersEmail: '',
         phoneNumber: '',
+        address: '',
         linkOne: '',
         linkTwo: '',
         // Education Form 
@@ -109,6 +110,12 @@ const ProgressBar = () => {
                     />
                 );
             case 3:
+                // return (
+                //     <DownLoads
+                //         data={formData}
+                //         back={back}
+                //     />
+                // );
                 return (
                     <ExperienceTwo
                         data={formData}

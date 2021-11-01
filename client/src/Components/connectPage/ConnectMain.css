@@ -21,3 +21,9 @@
     height: 5vh;
     background-color: teal;
 }
+.login{
+    position: fixed;
+    top: 0;
+    /* margin: auto;
+    width: 50%; */
+}

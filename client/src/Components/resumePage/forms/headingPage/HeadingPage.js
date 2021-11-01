@@ -30,7 +30,6 @@ const Form = (props) => {
             return true 
         }
         else if(data.firstName === ''){
-
         }
         setStyleState("label-valid-one")
         setStyleStateBottom("bottom-border-valid")
@@ -107,7 +106,7 @@ const Form = (props) => {
     return (
         <div className="form-one">
             <form >
-                {/* Top row */}
+                {/* Top row: First and Last Name*/}
                 <div className='main-container-one'>
                     <div className="column-container-one">
                         {/* First Name */}
@@ -142,7 +141,7 @@ const Form = (props) => {
                         </div>
                     </div>
                 </div>
-                {/* Middle row */}
+                {/* Middle row: Email and Phone Number */}
                 <div className="main-container-one">
                     <div className="column-container-one">
                         {/* Email */}
@@ -174,6 +173,41 @@ const Form = (props) => {
                                 />
                                 <div className = {styleStateBottomFour}></div>
                             </div>
+                        </div>
+                    </div>
+                </div>  
+                {/* End Row: Address*/}
+                <div className="main-container-one">
+                    <div className="column-container-one">
+                        {/* Email */}
+                        <div className="column-item-one">
+                            <div className="input-container">
+                                <span className = "label-default-one">Address (Optional)</span>
+                                <input 
+                                    type="address"
+                                    name="address"
+                                    placeholder="Street, City, State"
+                                    className="input-area-one" 
+                                    value={data.address}
+                                    onChange={handleChange}
+                                />
+                                <div className = "bottom-border-default"></div>
+                            </div>
+                        </div>
+                        {/* Phone Number */}
+                        <div className="column-item-one">
+                            {/* <div className="input-container">
+                                <span className = {styleStateFour}>Phone Number</span>
+                                <input
+                                    type="tel"
+                                    name="phoneNumber"
+                                    placeholder="e.g. 1234567890"
+                                    className="input-area-one" 
+                                    value={data.phoneNumber}
+                                    onChange={handleChange} 
+                                />
+                                <div className = {styleStateBottomFour}></div>
+                            </div> */}
                         </div>
                     </div>
                 </div>  
@@ -214,10 +248,10 @@ const Form = (props) => {
                                     <span className = 'label-default-one'>Link (optional)</span>
                                     <input
                                             type="tel"
-                                            name="linkOneTwo"
+                                            name="linkTwo"
                                             placeholder="e.g. GitHub"
                                             className = 'input-area-one'
-                                            value={data.linkOneTwo}
+                                            value={data.linkTwo}
                                             onChange={handleChange} 
                                         />
                                     <div className = 'bottom-border-default'></div>
